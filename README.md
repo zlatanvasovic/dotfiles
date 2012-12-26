@@ -4,4 +4,4 @@ This repo is for testing. Site, files, and other are **ONLY FOR TESTING**. **DON
 
 # Common Lisp
 
-There is Common Lisp test. It is app for display **Hello world!**.
+There is Common Lisp test. It is app for displaying **Hello world!**
