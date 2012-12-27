@@ -6,7 +6,7 @@ This repo is for testing. Site, files, and other are **ONLY FOR TESTING**. **DON
 
 There is Common Lisp test. It is app for displaying **Hello world!**
 
-Also, there is `shell script` for CLISP conversion from °C to °F.
+Also, there is **`shell script`** called _"clisp-convert"_ for CLISP conversion from °C to °F.
 
 # Cloning
 
