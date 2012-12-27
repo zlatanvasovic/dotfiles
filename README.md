@@ -5,3 +5,21 @@ This repo is for testing. Site, files, and other are **ONLY FOR TESTING**. **DON
 # Common Lisp
 
 There is Common Lisp test. It is app for displaying **Hello world!**
+
+Also, there is `shell script` for CLISP conversion from °C to °F.
+
+# Cloning
+
+```
+$ git clone git://github.com/ZDroid/test
+```
+
+# Simple run
+
+```
+$ python /path/to/test/test.lsp
+```
+and
+```
+$ /path/to/test/clisp-convert.sh
+```
