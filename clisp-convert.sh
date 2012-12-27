@@ -1,8 +1,8 @@
 #!/bin/bash
-# CLISP skripta - konverzija iz C° u °F
-# Napisao Zlatan Vasović (ZDroid) @ 2012
+# Script - CLISP conversion from C° to °F
+# Written by Zlatan Vasović (ZDroid) @ 2012
 clear
-echo "Ovo je CLISP skripta - konverzija iz C° u °F"
-echo "Za primer je uzeto 10° C"
+echo "This is script - CLISP conversion from C° to °F"
+echo "For example is taken 10° C"
 clisp
 (+ (/ (* 10 9) 5) 32)
