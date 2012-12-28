@@ -17,7 +17,7 @@ After that, we need SLIME dir → `mkdir ~/.slime`
 
 Make `.emacs` file in your **home** dir
 
-Insert following code in that:
+Insert following code in that
 ```
 ;;; Lisp (SLIME) interaction
 (setq inferior-lisp-program "clisp")
@@ -25,6 +25,8 @@ Insert following code in that:
 (require 'slime)
 (slime-setup)
 ```
+Also, you can download `.emacs` file from [**/ZDroid/test/.emacs**] (https://github.com/ZDroid/test/blob/master/.emacs).
+
 Emacs is now ready for LISP!
 
 # Cloning
