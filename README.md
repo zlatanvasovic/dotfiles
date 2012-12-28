@@ -2,6 +2,8 @@
 
 This repo is for testing. Site, files, and other are **ONLY FOR TESTING**. **DON'T USE THIS REPO FOR YOUR MAIN SISTEM! USE THIS REPO ONLY FOR TESTING (like a VirtualBox)!**
 
+**Test site** is created with github pages. Test site (`gh-pages` branch) → http://zdroid.github.com/test/.
+
 # Lisp
 
 There is Common Lisp test. It is app for displaying **Hello world!**
