@@ -2,11 +2,11 @@
 
 This repo is for testing. Site, files, and other are **ONLY FOR TESTING**. **DON'T USE THIS REPO FOR YOUR MAIN SISTEM! USE THIS REPO ONLY FOR TESTING (like a VirtualBox)!**
 
-# Common Lisp
+# Lisp
 
 There is Common Lisp test. It is app for displaying **Hello world!**
 
-Also, there is **`shell script`** called _"clisp-convert"_ for CLISP conversion from °C to °F.
+Also, there is `shell script` (`.sh`) called *"clisp-convert"* for CLISP conversion from °C to °F. I will try do make that in `shellisp` language.
 
 # Cloning
 
