@@ -8,4 +8,4 @@ sudo apt-get install clisp
 # clisp
 # For installing Emacs and SLIME uncomment (remove #) from line down
 # sudo apt-get install emacs slime
-# For conf see README
+# For Emacs conf see README
