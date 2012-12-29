@@ -8,7 +8,7 @@ This repo is for testing. Site, files, and other are **ONLY FOR TESTING**. **DON
 
 There is Common Lisp test. It is app for displaying **Hello world!**
 
-Also, there is `shell script` (`.sh`) called *"clisp-convert"* for CLISP conversion from °C to °F. I will try do make that in `shellisp` language.
+Also, there is `shell script` (`.sh`) called *"clisp-convert"* for CLISP conversion from °C to °F. I will try do make that in `shellisp` language. **Before you run this scripts, you need to set `chmod a+x` (for executing).**
 
 I recommend `Emacs` (see **# Emacs**) for editing this code. If you don't want use Emacs, you can try other (`gedit`, `nano`, `vi(m)`...).
 
