@@ -10,10 +10,12 @@ There is Common Lisp test. It is app for displaying **Hello world!**
 
 Also, there is `shell script` (`.sh`) called *"clisp-convert"* for CLISP conversion from °C to °F. I will try do make that in `shellisp` language.
 
+I recommend `Emacs` (see **# Emacs**) for editing this code. If you don't want use Emacs, you can try other (`gedit`, `nano`, `vi(m)`...).
+
 # Emacs
 
 Firstly, run [clisp-ubuntu.sh] (https://github.com/ZDroid/test/blob/master/clisp-ubuntu.sh)
-Note: **FIRSTLY SEE WHAT TO UNCOMMENT!**
+Note: **SEE WHAT TO UNCOMMENT!**
 
 After that, we need SLIME dir → `mkdir ~/.slime`
 
