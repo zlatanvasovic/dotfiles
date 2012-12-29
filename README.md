@@ -22,7 +22,7 @@ After that, we need SLIME dir → `mkdir ~/.slime`
 Make `.emacs` file in your **home** dir
 
 Insert following code in that
-```
+```lisp
 ;;; Lisp (SLIME) interaction
 (setq inferior-lisp-program "clisp")
 (add-to-list 'load-path "~/.slime")
@@ -34,17 +34,15 @@ Also, you can download `.emacs` file from [**/ZDroid/test/.emacs**] (https://git
 Emacs is now ready for LISP!
 
 # Cloning
-
-```
+```shell
 $ git clone git://github.com/ZDroid/test
 ```
 
 # Simple run
-
-```
+```shell
 $ python /path/to/test/test.lsp
 ```
 and
-```
+```shell
 $ /path/to/test/clisp-convert.sh
 ```
