@@ -1,6 +1,7 @@
 #!/bin/bash
 # Script - CLISP installation
 # Written by Zlatan Vasović (ZDroid) @ 2012
+# You need to set +x (executable) permissions for this file
 
 sudo apt-get install clisp
 
