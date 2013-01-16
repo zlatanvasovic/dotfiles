@@ -8,7 +8,7 @@ This repo is for testing. Site, files, and other are **ONLY FOR TESTING**. **DON
 
 There is Common Lisp test. It is app for displaying **Hello world!**
 
-Also, there is `shell script` (`.sh`) called *"clisp-convert"* for CLISP conversion from °C to °F. I will try do make that in `shellisp` language. **Before you run this scripts, you need to set `chmod a+x` (for executing).**
+Also, there is `shell script` (`.sh`) called *"clisp-convert"* for CLISP conversion from °C to °F. I will try do make that in `shellisp` language. **Before you run this scripts, you need to set `chmod a+x` or `chmod x` (for executing).**
 
 I recommend `Emacs` (see **# Emacs**) for editing this code. If you don't want use Emacs, you can try other (`gedit`, `nano`, `vi(m)`...).
 
@@ -21,7 +21,7 @@ After that, we need SLIME dir → `mkdir ~/.slime`
 
 Make `.emacs` file in your **home** dir
 
-Insert following code in that
+Insert following code in that (you can remove *`;;; Lisp (SLIME) interaction`* if you want, that's comment)
 ```lisp
 ;;; Lisp (SLIME) interaction
 (setq inferior-lisp-program "clisp")
