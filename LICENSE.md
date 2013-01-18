@@ -1,8 +1,8 @@
 # Do what you want!
 
-You can read, write and execute this (<b>777</b> permissions).
+I am author. You only need to add attribution. For other are you free!
 
-Copyright isn't in any part of this software.
+You can read, write and execute this (<b>777</b> permissions).
 
 ##Tips
 
