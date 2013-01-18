@@ -1,0 +1,21 @@
+# CLISP INSTALL script
+# by Zlatan Vasović (ZDroid) @ 2013
+
+# For Ubuntu you can use clisp-ubuntu
+# If you don't want can COMPILE
+
+# OLD SCHOOL COMPILE!
+# For Ubuntu you need build essential (uncomment next line)
+# sudo apt-get install build-essential
+wget https://downloads.sourceforge.net/project/clisp/clisp/2.49/clisp-2.49.tar.bz2?r=https%3A%2F%2Fsourceforge.net%2Fprojects%2Fclisp%2F%3Fsource%3Dnavbar&ts=1358540512&use_mirror=switch
+uncompress clisp-2.49.tar.bz2
+tar -xvf clisp-2.49.tar
+cd clisp-2.49
+make
+# Add sudo at start of this line or run script as root (#)
+make install
+# If you want to back to parent directory uncomment next line
+# cd ..
+
+# RUNNING CLISP (uncomment next line)
+# clisp
