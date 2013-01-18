@@ -2,7 +2,7 @@
 # by Zlatan Vasović (ZDroid) @ 2013
 
 # For Ubuntu you can use clisp-ubuntu
-# If you don't want can COMPILE
+# If you don't want you can COMPILE
 
 # OLD SCHOOL COMPILE!
 # For Ubuntu you need build essential (uncomment next line)
@@ -12,7 +12,7 @@ uncompress clisp-2.49.tar.bz2
 tar -xvf clisp-2.49.tar
 cd clisp-2.49
 make
-# Add sudo at start of this line or run script as root (#)
+# Add sudo at start of this line or run script as root (~#)
 make install
 # If you want to back to parent directory uncomment next line
 # cd ..
