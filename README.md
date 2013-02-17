@@ -33,6 +33,20 @@ Also, you can download `.emacs` file from [**/ZDroid/test/.emacs**] (https://git
 
 Emacs is now ready for LISP!
 
+# C
+There is also C test file, `test.c`.
+```c
+/* Test program */
+
+#include<stdio.h>
+
+main()
+{
+    printf("C test");
+
+}
+```
+
 # Cloning
 ```shell
 $ git clone git://github.com/ZDroid/test
