@@ -53,7 +53,7 @@ $ git clone git://github.com/ZDroid/test
 ```
 
 # Simple run
-```shell
+```bash
 $ clisp /path/to/test/test.lsp
 ```
 and
