@@ -48,15 +48,15 @@ main()
 ```
 
 # Cloning
-```shell
+```bash
 $ git clone git://github.com/ZDroid/test
 ```
 
 # Simple run
 ```shell
-$ python /path/to/test/test.lsp
+$ clisp /path/to/test/test.lsp
 ```
 and
-```shell
+```bash
 $ /path/to/test/clisp-convert.sh
 ```
