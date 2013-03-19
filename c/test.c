@@ -4,6 +4,8 @@
 
 main()
 {
-    printf("C test");
+	printf("Hello World");
+	printf("C test");
+
 
 }

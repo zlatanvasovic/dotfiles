@@ -1,27 +1,36 @@
-# Test
+# ZDroid/programming
 
-This repo is for testing. Site, files, and other are **ONLY FOR TESTING**. **DON'T USE THIS REPO FOR YOUR MAIN SISTEM! USE THIS REPO ONLY FOR TESTING (like a VirtualBox)!**
+**Collection of programming content**
 
-**Test site** is created with github pages. Test site (`gh-pages` branch) → http://zdroid.github.com/test/.
+All content here is original.
 
 # Lisp
 
-There is Common Lisp test. It is app for displaying **Hello world!**
+Here is a Common Lisp test. It is a program for displaying **Hello world!**
 
-Also, there is `shell script` (`.sh`) called *"clisp-convert"* for CLISP conversion from °C to °F. I will try do make that in `shellisp` language. **Before you run this scripts, you need to set `chmod a+x` or `chmod x` (for executing).**
+```lisp
+;; Prints standard Hello world programm
+(print "Hello world!")
+(print "This is CLISP test!")
+```
 
-I recommend `Emacs` (see **# Emacs**) for editing this code. If you don't want use Emacs, you can try other (`gedit`, `nano`, `vi(m)`...).
+## Emacs
 
-# Emacs
+Emacs is great program for editing lisp code. If you don't want use Emacs, you can use some other.
 
-Firstly, run [clisp-ubuntu.sh] (https://github.com/ZDroid/test/blob/master/clisp-ubuntu.sh)
-Note: **SEE WHAT TO UNCOMMENT!**
+Steps for Emacs install and setup:
+* Modify and run [clisp-install.sh] (https://github.com/ZDroid/programming/tree/master/clisp-install.sh).
+* Make SLIME directory:
+```bash
+mkdir ~/.slime
+```
 
-After that, we need SLIME dir → `mkdir ~/.slime`
+* Make `.emacs` file in your **home** directory:
+```bash
+touch ~/.emacs
+```
 
-Make `.emacs` file in your **home** dir
-
-Insert following code in that (you can remove *`;;; Lisp (SLIME) interaction`* if you want, that's comment)
+* Insert following code in that (you can remove *`;;; Lisp (SLIME) interaction`* if you want, that's comment):
 ```lisp
 ;;; Lisp (SLIME) interaction
 (setq inferior-lisp-program "clisp")
@@ -29,12 +38,23 @@ Insert following code in that (you can remove *`;;; Lisp (SLIME) interaction`* i
 (require 'slime)
 (slime-setup)
 ```
-Also, you can download `.emacs` file from [**/ZDroid/test/.emacs**] (https://github.com/ZDroid/test/blob/master/.emacs).
+You can download `.emacs` file from [here] (https://github.com/ZDroid/programming/tree/master/lisp/.emacs).
 
 Emacs is now ready for LISP!
 
+# Shell
+
+You can use shell scripts from this repo. That's for lisp.
+
+Current scripts:
+* **clisp-convert.sh** - script for °C to °F conversion in CLISP
+* **clisp-install.sh** - CLISP installation
+
+**Note:**  
+Before you run shell scripts, you need to set `chmod +x` (for executing).
+
 # C
-There is also C test file, `test.c`.
+Here is also a simple C test file called *`test.c`*.
 ```c
 /* Test program */
 
@@ -42,21 +62,14 @@ There is also C test file, `test.c`.
 
 main()
 {
-    printf("C test");
+    printf("Hello World");
+	printf("C test");
+
 
 }
 ```
 
-# Cloning
+# Cloning repo
 ```bash
-$ git clone git://github.com/ZDroid/test
-```
-
-# Simple run
-```bash
-$ clisp /path/to/test/test.lsp
-```
-and
-```bash
-$ /path/to/test/clisp-convert.sh
+$ git clone git@github.com:ZDroid/test
 ```
