@@ -1,0 +1,5 @@
+#!/bin/sh
+#
+# Count number of code lines.
+
+find . -type f |grep -v ./.git |grep -v ./*~ |grep -v ./*.m*d* |grep -v ./LICENSE* |xargs wc -l
