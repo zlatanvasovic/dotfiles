@@ -2,15 +2,17 @@
 #
 # Convert images.
 
-format="png"	# type of image(s)
-size="400"	# wanted size
+format="png" # type of image(s)
+size="400" # wanted size
 
 for img in *."$format";
 do echo "Resizing $img...";
 convert "$img" -resize "$size"x "$img";
+
 if [ $? -eq 0 ]; then
 	echo "\n\033[1;32mDone!\033[0m\n";
 else
 	echo "\n\033[1;31mError!\033[0m\n";
 fi;
+
 done

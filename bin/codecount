@@ -2,4 +2,4 @@
 #
 # Count number of code lines.
 
-find . -type f |grep -v ./.git |grep -v ./*~ |grep -v ./*.m*d* |grep -v ./LICENSE* |xargs wc -l
+find . -type f |grep -v ./*~ |grep -v ./.git |xargs wc -l |cut -c 1-8 |awk '{total += $1} END {print total}'
