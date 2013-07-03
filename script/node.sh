@@ -9,7 +9,7 @@ if [[ $EUID -ne 0 ]]; then
 fi
 
 # Ubuntu dependencies
-lsb_release -r |grep "Distributor ID:	Ubuntu" > /dev/null;
+lsb_release -r |grep "Distributor ID:	Ubuntu" > /dev/null
 if [ $? -eq 0 ]; then
 	apt-get install build-essential
 fi
