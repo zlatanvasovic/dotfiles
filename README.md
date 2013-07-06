@@ -2,12 +2,6 @@
 
 **Code collection**
 
-All content is original.
-
 Code is organized into subdirectories that represents categories.
 
-## Cloning repo
-
-```bash
-$ git clone git@github.com:ZDroid/zdsh
-```
+You are using this scripts on own risk. It's better to fork repository and add / modify / delete scripts by your mind.
