@@ -3,3 +3,6 @@
 	email = legospace9876@gmail.com
 [color]
 	ui = true
+[core]
+	excludesfile = ~/.gitignore-global
+	editor = gedit
