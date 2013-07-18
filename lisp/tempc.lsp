@@ -1,13 +1,11 @@
-;;;; Temperature conversion in Lisp
+;;;; Temperature conversion in Lisp - from °C to °F
 
-;;; I made Lisp function "tempc" for conversion from °C to °F
+;;; Function is called "tempc"
 
-(defun tempc(n)
+(defun tempc(n) ; "n" = °C value
   (+ (/ (* n 9) 5) 32))
 
-;;; In this situation variable "n" is °C value
-
-;;; You can load this function with "(require '/path/to/tempc.lsp')"
+;;; Load this function with `(require '/path/to/tempc.lsp')`
 
 ;;; Usage:
 ;;; (tempc 1)
