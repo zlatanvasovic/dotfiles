@@ -1,4 +1,0 @@
-{
-  "directory": "dev/bower",
-  "shorthand_resolver": "git://github.com/{{{ organization }}}/{{{ package }}}.git"
-}

@@ -14,6 +14,7 @@ if [ $? -eq 0 ]; then
 	apt-get install build-essential
 fi
 
+# Installation
 wget http://cl.ly/0Y2Z1g442424/clisp-2.49.tar.bz2
 tar -xvjf clisp-2.49.tar.bz2
 cd clisp-2.49
