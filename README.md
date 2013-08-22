@@ -6,4 +6,4 @@ Code is organized into subdirectories that represents categories.
 
 You are using this dotfiles on own risk. It's better to fork repository and modify dotfiles by your mind.
 
-Code is licensed under the terms of MIT license (see `LICENSE.md` for more details).
+Licensed under the terms of MIT license.
