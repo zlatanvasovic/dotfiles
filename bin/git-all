@@ -1,5 +1,0 @@
-#!/bin/sh
-#
-# Add all to next commit.
-
-git add -A
