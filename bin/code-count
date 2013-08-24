@@ -1,5 +1,0 @@
-#!/bin/sh
-#
-# Count number of code lines.
-
-find . -type f |grep -v ./*~ |grep -v ./.git |xargs wc -l |cut -c 1-8 |awk "{total += $1} END {print total}"

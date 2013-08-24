@@ -1,0 +1,5 @@
+#!/bin/sh
+#
+# Count installed packages.
+
+dpkg -l |grep ^ii |wc -l

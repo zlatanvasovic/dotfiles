@@ -1,0 +1,14 @@
+[user]
+	name = ZDroid
+	email = legospace9876@gmail.com
+[color]
+	ui = true
+[core]
+	excludesfile = ~/.gigl
+	editor = gedit
+[alias]
+	cm = commit
+	co = checkout
+	all = add -A
+	br = branch
+	st = status
