@@ -2,17 +2,7 @@
 #
 # Update great things.
 
-# Root privilegies is needed for updates
-if [[ $EUID -ne 0 ]]
-then
-  echo Script must be run as root! 1>&2
-  exit 1
-fi
-
-# Avoid cache in /home
-cd /tmp
-
 # Updt!
-apt-get update
-apt-get upgrade -y
+sudo apt-get update
+sudo apt-get upgrade -y
 npm up -g
