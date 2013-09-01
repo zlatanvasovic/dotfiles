@@ -7,8 +7,8 @@
 	excludesfile = ~/.gigl
 	editor = gedit
 [alias]
-	cm = commit
-	co = checkout
 	all = add -A
 	br = branch
+	cm = commit
+	co = checkout
 	st = status
