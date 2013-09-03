@@ -2,4 +2,4 @@
 #
 # Count installed packages.
 
-dpkg -l |grep ^ii |wc -l
+dpkg -l | grep ^ii | wc -l
