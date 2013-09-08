@@ -41,4 +41,3 @@ normal=`tput sgr0`
 
 # Dotfiles
 export PATH=${PATH}:~/dev/dotfiles/bin
-export PATH=${PATH}:~/dev/dotfiles/script

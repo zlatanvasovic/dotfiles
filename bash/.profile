@@ -1,10 +1,5 @@
-# ~/.profile: executed by the command interpreter for login shells.
-
-# If running Bash
-if [ -n "$BASH_VERSION" ]
+# If find `.bashrc`
+if [ -f ~/.bashrc ]
 then
-  if [ -f "$HOME/.bashrc" ]
-  then
-    . "$HOME/.bashrc"
-  fi
+  . ~/.bashrc
 fi

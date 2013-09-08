@@ -2,4 +2,6 @@
 *.old
 *.pyc
 *.crx
+*.asc
+*.log
 _site/

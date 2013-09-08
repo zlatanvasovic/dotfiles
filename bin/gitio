@@ -8,9 +8,9 @@
 # Created by @defunkt:
 #   https://gist.github.com/1209316
 #
-# Copies the git.io URL to your clipboard with Linux fix.
+# Copies the git.io URL to the clipboard.
 
-url  = ARGV[0]
+url = ARGV[0]
 code = ARGV[1]
 
 if url !~ /^(https?:\/\/)?(gist\.)?github.com/
