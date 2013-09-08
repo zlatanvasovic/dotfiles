@@ -5,7 +5,7 @@
 	ui = true
 [core]
 	excludesfile = ~/.gigl
-	editor = gedit
+	editor = brackets
 [alias]
 	all = add -A
 	br = branch
