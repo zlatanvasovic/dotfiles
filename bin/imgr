@@ -3,7 +3,7 @@
 # Resize images.
 #
 # Usage:
-#   img-resize FORMAT SIZE
+#   $ img-resize FORMAT SIZE
 
 format=$1
 size=$2
@@ -15,7 +15,7 @@ done
 
 if [ $? -eq 0 ]
 then
-	echo "\n\033[1;32mDone.\033[0m\n"
+  echo "\n\033[1;32mDone.\033[0m\n"
 else
-	echo "\n\033[1;31mUndone.\033[0m\n"
+  echo "\n\033[1;31mUndone.\033[0m\n"
 fi

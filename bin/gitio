@@ -1,12 +1,11 @@
 #!/usr/bin/env ruby
 #
 # Usage:
-#   gitio URL [CODE]
+#   $ gitio URL [CODE]
 #
-# Turns a github.com URL into a git.io URL.
+# Turn a github.com URL into a git.io URL.
 #
-# Created by @defunkt:
-#   https://gist.github.com/1209316
+# Source: https://gist.github.com/1209316
 #
 # Copies the git.io URL to the clipboard.
 
