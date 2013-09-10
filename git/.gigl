@@ -1,7 +1,5 @@
 *~
 *.old
 *.log
-*.asc
 *.pyc
-*.crx
 _site/
