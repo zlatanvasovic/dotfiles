@@ -10,9 +10,6 @@ HISTFILESIZE=1000
 # Check the window size after each command
 shopt -s checkwinsize
 
-# Make `less` more friendly for non-text input files
-[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
-
 # Enable completion
 if [ -f /etc/bash_completion ] && ! shopt -oq posix
 then
@@ -26,18 +23,17 @@ then
 fi
 
 # Colors!
-PS1="${debian_chroot:+($debian_chroot)}\[\033[01;37m\]\u@\h\[\033[00m\] \[\033[01;34m\]\w\[\033[00m\] \$ "
-
 if [ -x /usr/bin/dircolors ]
 then
   test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+  PS1="${debian_chroot:+($debian_chroot)}\[\033[01;37m\]\u@\h\[\033[00m\] \[\033[01;34m\]\w\[\033[00m\] \$ "
   alias ls="ls --color=always -p"
   alias grep="grep --color=auto"
 fi
 
 # Formatting
+nrml=`tput sgr0`
 bold=`tput bold`
-normal=`tput sgr0`
 
 # Dotfiles
-export PATH=${PATH}:~/dev/dotfiles/bin
+export PATH=${PATH}:~/.dotfiles/bin

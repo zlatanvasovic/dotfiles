@@ -3,6 +3,5 @@
 # Update great things.
 
 # Updt!
-sudo apt-get update
-sudo apt-get upgrade -y
+sudo apt-get update && sudo apt-get upgrade -y
 npm up -g

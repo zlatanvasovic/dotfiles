@@ -1,14 +1,14 @@
-[user]
-	name = ZDroid
-	email = legospace9876@gmail.com
-[color]
-	ui = true
-[core]
-	excludesfile = ~/.gigl
-	editor = brackets
 [alias]
 	all = add -A
 	br = branch
 	cm = commit
 	co = checkout
 	st = status
+[color]
+	ui = true
+[core]
+	editor = brackets
+	excludesfile = ~/.gigl
+[user]
+	email = legospace9876@gmail.com
+	name = Zlatan Vasović
