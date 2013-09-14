@@ -3,9 +3,10 @@
 	br = branch
 	cm = commit
 	co = checkout
-	st = status
+	nuke = !git branch -D $1 && git push origin :$1
+	st = status -sb
 [color]
-	ui = true
+	ui = always
 [core]
 	editor = brackets
 	excludesfile = ~/.gigl

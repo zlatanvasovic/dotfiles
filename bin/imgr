@@ -3,7 +3,7 @@
 # Resize images.
 #
 # Usage:
-#   $ img-resize FORMAT SIZE
+#   $ imgr FORMAT SIZE
 
 format=$1
 size=$2

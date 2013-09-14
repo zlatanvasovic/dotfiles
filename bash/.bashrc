@@ -16,7 +16,7 @@ then
   . /etc/bash_completion
 fi
 
-# Set variable identifying the my chroot
+# Set variable identifying my chroot
 if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]
 then
   debian_chroot=$(cat /etc/debian_chroot)
