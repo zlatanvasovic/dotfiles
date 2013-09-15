@@ -3,14 +3,14 @@
 # Resize images.
 #
 # Usage:
-#   $ imgr FORMAT SIZE
+#   $ imgr FORMAT WIDTH
 
 format=$1
-size=$2
+width=$2
 
 for img in *."$format"
 do echo "\nResizing $img..."
-convert "$img" -resize "$size"x sm-"$img"
+convert "$img" -resize "$width"x sm-"$img"
 done
 
 if [ $? -eq 0 ]

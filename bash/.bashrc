@@ -1,5 +1,5 @@
 # If not running interactively, don't do anything
-[ -z "$PS1" ] && return
+[[ $- = *i* ]] || return
 
 # Set up history
 shopt -s histappend
@@ -16,24 +16,18 @@ then
   . /etc/bash_completion
 fi
 
-# Set variable identifying my chroot
-if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]
-then
-  debian_chroot=$(cat /etc/debian_chroot)
-fi
-
 # Colors!
 if [ -x /usr/bin/dircolors ]
 then
   test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-  PS1="${debian_chroot:+($debian_chroot)}\[\033[01;37m\]\u@\h\[\033[00m\] \[\033[01;34m\]\w\[\033[00m\] \$ "
+  PS1="\[\033[1m\]\$\[\033[00m\] \[\033[1;34m\]\w\[\033[00m\] "
   alias ls="ls --color=always -p"
   alias grep="grep --color=always"
 fi
 
-# Formatting
-nrml=`tput sgr0`
-bold=`tput bold`
+# Text tools
+alias uncrlf="sed -i 's/\r$//'"
+alias pbcp="xclip -selection clipboard"
 
 # Dotfiles
 export PATH=${PATH}:~/.dotfiles/bin

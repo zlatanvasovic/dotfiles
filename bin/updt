@@ -2,5 +2,6 @@
 #
 # Update great things.
 
+cd /tmp
 sudo apt-get update && sudo apt-get upgrade -y
-npm up -g
+sudo npm up -g
