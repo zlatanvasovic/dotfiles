@@ -3,6 +3,7 @@
 	br = branch
 	cm = commit
 	co = checkout
+	lg = log --pretty=format:'%Cgreen%h%Creset %an: %s %Creset%Cblue(%cr)%Creset' --abbrev-commit --relative-date
 	nuke = !git branch -D $1 && git push origin :$1
 	st = status -sb
 [color]
