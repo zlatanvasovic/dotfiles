@@ -27,8 +27,8 @@ fi
 
 # Text tools
 alias uncrlf="sed -i 's/\r$//'"
-alias pbcopy="xclip -sel clipboard"
-alias pbpaste="xclip -sel clipboard -o"
+alias pbcopy="xclip -sel clip"
+alias pbpaste="xclip -sel clip -o"
 
 # Dotfiles
 export PATH=${PATH}:~/.dotfiles/bin

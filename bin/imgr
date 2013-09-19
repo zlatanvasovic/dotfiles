@@ -8,9 +8,9 @@
 format=$1
 width=$2
 
-for img in *."$format"
+for img in *.$format
 do echo "\nResizing $img..."
-convert "$img" -resize "$width"x sm-"$img"
+convert $img -resize "$width"x sm-$img
 done
 
 if [ $? -eq 0 ]
