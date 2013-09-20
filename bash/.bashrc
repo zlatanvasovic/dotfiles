@@ -1,4 +1,4 @@
-# If not running interactively, don't do anything
+# Check for interactivity
 [[ $- = *i* ]] || return
 
 # Set up history
@@ -32,3 +32,4 @@ alias pbpaste="xclip -sel clip -o"
 
 # Dotfiles
 export PATH=${PATH}:~/.dotfiles/bin
+alias git="hub"
