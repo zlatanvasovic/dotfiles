@@ -2,4 +2,4 @@
 #
 # Count number of code lines.
 
-find . -type f -print -o -name .git -prune | xargs wc -l | cut -c 1-8 | awk '{total = $1} END {print total}'
+find . -type f -print -o -name .git -prune | xargs wc -l | awk 'END {print $1}'

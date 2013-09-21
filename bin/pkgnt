@@ -1,5 +1,6 @@
-#!/bin/bash
+#!/bin/sh
 #
 # Count installed packages.
 
-dpkg -l | grep ^ii | wc -l
+echo "\n  \033[1mapt:\033[0m `dpkg -l | grep ^ii | wc -l`"
+echo "  \033[1mnpm:\033[0m $((`npm list -g | wc -l` - 2))\n"

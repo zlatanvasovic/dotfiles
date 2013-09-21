@@ -2,6 +2,6 @@
 #
 # Update great things.
 
-cd /tmp
 sudo apt-get update && sudo apt-get upgrade -y
 sudo npm up -g
+rm -rf ~/tmp
