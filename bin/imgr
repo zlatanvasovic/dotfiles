@@ -6,8 +6,7 @@
 #   $ imgr FORMAT WIDTH
 
 for img in *.$1
-do echo "\n  Resizing $img..."
-convert $img -resize "$2"x ${img%%.*}-resized.${img#*.}
+do convert $img -resize "$2"x ${img%%.*}-resized.${img#*.}
 done
 
 if [ $? -eq 0 ]

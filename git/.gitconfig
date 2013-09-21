@@ -8,7 +8,7 @@
 [color]
 	ui = always
 [core]
-	editor = brackets
+	editor = gedit
 	excludesfile = ~/.ignoregit
 [push]
 	default = simple
