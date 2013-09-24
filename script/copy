@@ -2,10 +2,7 @@
 #
 # Copy 'em.
 
-for dot in git/.*
-do cp $dot ~/ 2> /dev/null
-done
-
-for dot in bash/.*
-do cp $dot ~/ 2> /dev/null
+for dot in bash/.[^.]* git/.[^.]*
+do
+  cp $dot ~/ 2> /dev/null
 done
