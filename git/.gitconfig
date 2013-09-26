@@ -3,7 +3,7 @@
 	br = branch
 	cm = commit
 	co = checkout
-	nuke = !git br -D $1 && git push origin :$1
+	nuke = !~/.dotfiles/git/nuke
 	st = status -sb
 [color]
 	ui = always
