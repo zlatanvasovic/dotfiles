@@ -31,7 +31,7 @@ alias pbcopy="xclip -sel clip"
 alias pbpaste="xclip -sel clip -o"
 
 # Dotfiles
-export PATH=${PATH}:~/.dotfiles/bin
+PATH=${PATH}:~/.dotfiles/bin
 
 # Helpers
 source ~/Dev/git/smith/smith.sh
