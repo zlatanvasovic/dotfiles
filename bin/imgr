@@ -7,7 +7,7 @@
 
 for img in *.$1
 do
-  convert $img -resize "$2"x ${img%%.*}-resized.${img#*.}
+  convert $img -resize $2 ${img%%.*}-resized.${img#*.} 2> /dev/null
 done
 
 if [ $? -eq 0 ]

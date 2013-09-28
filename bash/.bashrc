@@ -1,7 +1,7 @@
 # Check for interactivity
 [[ $- = *i* ]] || return
 
-# Set up history
+# Write history
 shopt -s histappend
 HISTCONTROL=ignoreboth
 HISTSIZE=1000
@@ -16,7 +16,7 @@ then
   . /etc/bash_completion
 fi
 
-# Colors!
+# Enable colors
 if [ -x /usr/bin/dircolors ]
 then
   test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
