@@ -3,7 +3,7 @@
 	br = branch
 	cm = commit
 	co = checkout
-	credit = !~/.dotfiles/git/author
+	credit = !~/.dotfiles/git/credit
 	nuke = !~/.dotfiles/git/nuke
 	st = status -sb
 [color]
