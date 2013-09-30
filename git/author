@@ -1,0 +1,10 @@
+#!/bin/bash
+#
+# Quicker way to credit an author on the latest commit.
+#
+# Usage:
+#   $ git credit "NAME" EMAIL
+#
+# Source: https://github.com/holman/dotfiles/blob/master/bin/git-credit
+
+git commit --amend --author "$1 <$2>" -C HEAD
