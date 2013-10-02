@@ -11,8 +11,6 @@
 [core]
 	editor = gedit
 	excludesfile = ~/.ignoregit
-[hub]
-	protocol = https
 [push]
 	default = simple
 [user]
