@@ -1,8 +1,18 @@
 #!/bin/bash
 #
 # Copy 'em.
+#
+# Usage (run from `~/.dotfiles`):
+#   $ tool/copy [DIRECTORY]
 
-for dot in bash/.[^.]* git/.[^.]*
+if [ -z $1 ]
+then
+  src=$1/.[^.]*
+else
+  src="bash/.[^.]* git/.[^.]*"
+fi
+
+for dot in $src
 do
   cp $dot ~/ 2> /dev/null
 done
