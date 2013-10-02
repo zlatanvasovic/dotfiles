@@ -5,11 +5,11 @@
 # Usage (run from `~/.dotfiles`):
 #   $ tool/copy [DIRECTORY]
 
-if [ -z $1 ]
+if [[ $1 = "" ]]
 then
-  src=$1/.[^.]*
-else
   src="bash/.[^.]* git/.[^.]*"
+else
+  src=$1/.[^.]*
 fi
 
 for dot in $src
