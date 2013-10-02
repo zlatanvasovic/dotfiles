@@ -1,6 +1,6 @@
 [alias]
 	all = add -A
-	br = branch
+	cl = clone -p
 	cm = commit
 	co = checkout
 	credit = !~/.dotfiles/git/credit
@@ -11,6 +11,8 @@
 [core]
 	editor = gedit
 	excludesfile = ~/.ignoregit
+[hub]
+	protocol = https
 [push]
 	default = simple
 [user]
