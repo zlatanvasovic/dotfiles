@@ -8,7 +8,7 @@
 
 if [ $1 = b ]
 then
-  git br -D $2 && git push origin :$2
+  git branch -D $2 && git push origin :$2
 fi
 
 if [ $1 = t ]
