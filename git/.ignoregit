@@ -1,5 +1,5 @@
 *~
 *.old
 *.log
-*.pyc
+*.py[co]
 _site/
