@@ -34,6 +34,6 @@ alias pbpaste="xclip -sel clip -o"
 PATH=${PATH}:~/.dotfiles/bin
 
 # Helpers
-source ~/Dev/git/smith/smith.sh
+source ~/dev/git/smith/smith.sh
 alias git="hub"
 alias rdb="rethinkdb -d .rethinkdb"
