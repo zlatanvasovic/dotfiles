@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Very simple todo app.
+# Simple todo app.
 #
 # Usage:
 #   $ todo add TASK
