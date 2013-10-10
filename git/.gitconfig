@@ -3,6 +3,7 @@
 	cl = clone -p
 	cm = commit
 	co = checkout
+	count = shortlog -sn
 	credit = !~/.dotfiles/git/credit
 	nuke = !~/.dotfiles/git/nuke
 	st = status -sb
