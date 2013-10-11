@@ -1,8 +1,6 @@
 # ~/.dotfiles
 
-**My dotfiles**
-
-They are organized into subdirectories that represents categories.
+Dotfiles are organized into subdirectories that represents categories.
 
 Licensed under the terms of MIT license.
 
