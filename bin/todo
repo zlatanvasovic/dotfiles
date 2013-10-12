@@ -6,7 +6,6 @@
 #   $ todo add TASK
 #   $ todo rm TASK
 #   $ todo ls
-#   $ todo clear
 
 if [ $1 = add ]
 then
@@ -21,9 +20,4 @@ fi
 if [ $1 = ls ]
 then
   ls -1 ~/dev/todo
-fi
-
-if [ $1 = clear ]
-then
-  rm ~/dev/todo/*
 fi
