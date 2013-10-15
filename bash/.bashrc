@@ -34,5 +34,5 @@ alias pbpaste="xclip -sel clip -o"
 PATH=${PATH}:~/.dotfiles/bin
 
 # Helpers
-source ~/dev/git/smith/smith.sh
+. ~/dev/git/smith/smith.sh
 alias git="hub"
