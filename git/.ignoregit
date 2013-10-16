@@ -3,3 +3,4 @@
 *.log
 *.py[co]
 _site/
+_gh_pages/
