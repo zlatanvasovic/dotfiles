@@ -1,6 +1,5 @@
 [alias]
 	all = add -A
-	cl = clone -p
 	cm = commit
 	co = checkout
 	count = shortlog -sn
