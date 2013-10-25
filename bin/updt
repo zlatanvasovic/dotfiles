@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Update great things.
+# Update packages.
 
 sudo apt-get update && sudo apt-get upgrade -y
 sudo npm up -g
