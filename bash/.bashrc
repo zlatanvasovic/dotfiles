@@ -36,3 +36,4 @@ PATH=${PATH}:~/.dotfiles/bin
 # Helpers
 . ~/dev/git/smith/smith.sh
 alias git="hub"
+alias rdb="rethinkdb -d .rdb"
