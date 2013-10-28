@@ -7,7 +7,7 @@
 
 if [[ $1 = "" ]]
 then
-  src="bash/.[^.]* git/.[^.]*"
+  src="*/.[^.]*"
 else
   src=$1/.[^.]*
 fi
