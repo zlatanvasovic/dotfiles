@@ -2,7 +2,7 @@
 #
 # Ping with boolean.
 
-ping -c1 google.com | grep -w 0% > /dev/null
+ping -c1 google.com | grep -w 0% > /tmp/netch.log
 
 if [ $? -eq 0 ]
 then
