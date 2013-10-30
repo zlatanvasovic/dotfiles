@@ -25,7 +25,7 @@ then
   alias grep="grep --color=always"
 fi
 
-# Text tools
+# Text utilities
 alias uncrlf="sed -i 's/\r$//'"
 alias pbcopy="xclip -sel clip"
 alias pbpaste="xclip -sel clip -o"
