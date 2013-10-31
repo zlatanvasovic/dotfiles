@@ -1,7 +1,7 @@
 [alias]
 	all = add -A
 	amend = commit --amend -C HEAD
-	cm = commit
+	ci = commit
 	co = checkout
 	count = shortlog -sn
 	credit = !~/.dotfiles/git/credit
