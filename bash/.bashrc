@@ -30,10 +30,10 @@ alias uncrlf="sed -i 's/\r$//'"
 alias pbcopy="xclip -sel clip"
 alias pbpaste="xclip -sel clip -o"
 
-# Scripts
-PATH=${PATH}:~/.dotfiles/bin
-
 # Helpers
-. ~/dev/git/smith/smith.sh
 alias git="hub"
 alias rdb="rethinkdb -d .rdb"
+
+# Scripts
+PATH=${PATH}:~/.dotfiles/bin
+. ~/dev/git/smith/smith.sh
