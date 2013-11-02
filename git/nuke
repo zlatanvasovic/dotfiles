@@ -6,12 +6,12 @@
 #   $ git nuke b BRANCH
 #   $ git nuke t TAG
 
-if [ $1 = b ]
+if [ $1 = -b ]
 then
   git branch -D $2 && git push origin :$2
 fi
 
-if [ $1 = t ]
+if [ $1 = -t ]
 then
   git tag -d $2 && git push origin :refs/tags/$2
 fi
