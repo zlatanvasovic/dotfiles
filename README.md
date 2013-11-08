@@ -10,6 +10,5 @@ repository and modify dotfiles by your mind.
 ## Contributing
 
 Feel free to [open a new issue](https://github.com/ZDroid/dotfiles/issues/new).
-I'll fix it as fast as possible.
 
 Thank you if send a pull request. New contributors are welcome.
