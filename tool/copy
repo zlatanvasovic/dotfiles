@@ -5,7 +5,7 @@
 # Usage (run from `~/.dotfiles`):
 #   $ tool/copy [DIRECTORY]
 
-if [[ $1 = "" ]]
+if [[ $1 == "" ]]
 then
   src="*/.[^.]*"
 else

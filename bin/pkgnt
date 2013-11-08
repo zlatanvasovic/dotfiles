@@ -9,10 +9,12 @@ if which apt-get > /dev/null
 then
   echo "\n  \033[1mapt:\033[0m   $apt"
 fi
+
 if which npm > /dev/null
 then
   echo "  \033[1mnpm:\033[0m   $npm\n"
 fi
+
 if which apt-get > /dev/null && which npm > /dev/null
 then
   echo "  \033[1mtotal:\033[0m $(($apt + $npm))\n"

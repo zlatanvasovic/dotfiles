@@ -1,5 +1,5 @@
 # Check for interactivity
-[[ $- = *i* ]] || return
+[[ $- == *i* ]] || return
 
 # Write history
 shopt -s histappend
