@@ -1,0 +1,8 @@
+#!/bin/sh
+#
+# Bootstrap dotfiles.
+
+~/.dotfiles/tool/copy
+echo "\n  Copying dotfiles...          \033[1;32mDone!\033[0m\n"
+~/.dotfiles/tool/configen
+echo "\n  Making gitconfig...          \033[1;32mDone!\033[0m\n"
