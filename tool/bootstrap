@@ -1,8 +1,33 @@
-#!/bin/sh
+#!/bin/bash
 #
 # Bootstrap dotfiles.
 
-~/.dotfiles/tool/copy
-echo "\n  Copying dotfiles...          \033[1;32mDone!\033[0m\n"
-~/.dotfiles/tool/configen
-echo "\n  Making gitconfig...          \033[1;32mDone!\033[0m\n"
+function config {
+  echo "What is your GitHub author name?"
+  read -e git_name
+  echo "What is your GitHub author e-mail?"
+  read -e git_email
+  sed -e "s/NAME/$git_name/g" -e "s/EMAIL/$git_email/g" \
+  git/gitconfig.template > ~/.gitconfig
+}
+
+function copy {
+  if [[ $2 == "" ]]
+  then
+    src="*/.[^.]*"
+  else
+    src=$2/.[^.]*
+  fi
+
+  for dot in $src
+  do
+    cp $dot ~/ 2> /dev/null
+  done
+}
+
+if [[ $1 == "" ]]
+then
+  copy && config
+else
+  $1
+fi
