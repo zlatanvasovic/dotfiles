@@ -27,7 +27,11 @@ function copy {
 
 if [[ $1 == "" ]]
 then
-  copy && config
-else
-  $1
+  config && copy
+elif [ $1 = config ]
+then
+  config
+elif [ $1 = copy ]
+then
+  copy
 fi
