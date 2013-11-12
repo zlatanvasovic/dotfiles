@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 #
 # Ping with boolean.
 
@@ -6,7 +6,7 @@ ping -c1 google.com | grep -w 0% > /tmp/netch.log
 
 if [ $? -eq 0 ]
 then
-  echo "\n  \033[1;32mTrue!\033[0m\n"
+  printf "\n  \033[1;32mTrue!\033[0m\n\n"
 else
-  echo "\n  \033[1;31mFalse!\033[0m\n"
+  printf "\n  \033[1;31mFalse!\033[0m\n\n"
 fi

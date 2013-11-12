@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 #
 # Resize images.
 #
@@ -12,7 +12,7 @@ done
 
 if [ $? -eq 0 ]
 then
-  echo "\n  \033[1;32mDone.\033[0m\n"
+  printf "\n  \033[1;32mDone.\033[0m\n\n"
 else
-  echo "\n  \033[1;31mUndone.\033[0m\n"
+  printf "\n  \033[1;31mUndone.\033[0m\n\n"
 fi
