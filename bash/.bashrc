@@ -21,8 +21,8 @@ if [ -x /usr/bin/dircolors ]
 then
   test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
   PS1="\[\033[1m\]\$\[\033[00m\] \[\033[1;34m\]\w\[\033[00m\] "
-  alias ls="ls --color=always -p"
-  alias grep="grep --color=always"
+  alias ls="ls --color=auto -p"
+  alias grep="grep --color=auto"
 fi
 
 # Text utilities

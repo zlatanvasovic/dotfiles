@@ -8,7 +8,7 @@
 	nuke = !~/.dotfiles/git/nuke
 	st = status -sb
 [color]
-	ui = always
+	ui = auto
 [core]
 	editor = gedit
 	excludesfile = ~/.ignoregit
