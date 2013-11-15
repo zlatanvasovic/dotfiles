@@ -1,7 +1,10 @@
+# Always-ignore files
 *~
 *.old
 *.log
 *.py[co]
+
+# Project-specific directories
 _site/
 _gh_pages/
 node_modules/
