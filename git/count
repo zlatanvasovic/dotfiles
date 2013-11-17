@@ -1,0 +1,17 @@
+#!/bin/bash
+#
+# Nuke git branch or tag.
+#
+# Usage:
+#   $ git nuke -c
+#   $ git nuke -b
+
+if [[ $1 = "" ]]
+then
+  git shortlog -sn
+fi
+
+if [ $1 = -b ]
+then
+  git branch | wc -l
+fi

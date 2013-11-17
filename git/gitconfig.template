@@ -3,7 +3,7 @@
 	amend = commit --amend -C HEAD
 	ci = commit
 	co = checkout
-	count = shortlog -sn
+	count = !~/.dotfiles/git/count
 	credit = !~/.dotfiles/git/credit
 	nuke = !~/.dotfiles/git/nuke
 	st = status -sb
