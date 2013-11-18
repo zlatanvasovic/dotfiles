@@ -2,7 +2,7 @@
 #
 # Count number of code lines.
 
-ignores=(.git .svn)
+ignores=(.git)
 ignore=""
 for item in ${ignores[*]}
 do
