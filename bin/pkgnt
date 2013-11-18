@@ -2,20 +2,19 @@
 #
 # Count installed packages.
 
-apt=`dpkg -l | grep ^ii | wc -l`
-npm=$((`npm ls -g | wc -l` - 2))
+apt=0
+npm=0
 
 if which apt-get > /dev/null
 then
+  apt=`dpkg -l | grep ^ii | wc -l`
   printf "\n  \033[1mapt:\033[0m   $apt\n"
 fi
 
 if which npm > /dev/null
 then
+  npm=$((`npm ls -g | wc -l` - 2))
   printf "  \033[1mnpm:\033[0m   $npm\n\n"
 fi
 
-if which apt-get npm > /dev/null
-then
-  printf "  \033[1mtotal:\033[0m $(($apt + $npm))\n\n"
-fi
+printf "  \033[1mtotal:\033[0m $(($apt + $npm))\n\n"
