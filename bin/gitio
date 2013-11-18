@@ -11,7 +11,7 @@ url = ARGV[0]
 code = ARGV[1]
 
 if url !~ /^(https?:\/\/)?(gist\.)?github.com/
-  abort "\033[1;31m*\033[0m github.com URLs only"
+  abort "\033[1m* github.com URLs only\033[0m"
 end
 
 if url !~ /^http/
