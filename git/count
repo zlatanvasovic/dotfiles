@@ -3,8 +3,7 @@
 # Nuke git branch or tag.
 #
 # Usage:
-#   $ git nuke
-#   $ git nuke -b
+#   $ git count [-b]
 
 if [[ $1 = "" ]]
 then

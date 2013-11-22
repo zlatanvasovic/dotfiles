@@ -5,9 +5,7 @@
 # `config()` is taken from holman/dotfiles repository.
 #
 # Usage:
-#   tool/bootstrap
-#   tool/bootstrap copy
-#   tool/bootstrap config
+#   tool/bootstrap [copy|config]
 
 function config {
   printf "\033[1mWhat is your GitHub author name?\033[0m\n"
