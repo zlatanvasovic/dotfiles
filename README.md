@@ -1,10 +1,10 @@
 # ~/.dotfiles
 
-Dotfiles are organized into subdirectories that represents categories.
+Dotfiles are in directories that represents categories.
 
 Licensed under the terms of MIT license.
 
-**N.B:** You are using use these dotfiles on own risk. It's better to fork
+**N.B:** You are using these dotfiles on own risk. It's better to fork
 repository and modify dotfiles by your mind.
 
 ## Contributing
