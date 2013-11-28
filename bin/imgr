@@ -7,7 +7,10 @@
 
 for img in *.$1
 do
-  convert $img -resize $2 ${img%%.*}-resized.${img#*.} > /tmp/imgr.log
+  if [[ ! $img == *-resized* ]]
+  then
+    convert $img -resize $2 ${img%%.*}-resized.${img#*.} > /tmp/imgr.log
+  fi
 done
 
 if [ $? -eq 0 ]
