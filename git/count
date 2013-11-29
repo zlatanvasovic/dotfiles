@@ -5,12 +5,12 @@
 # Usage:
 #   $ git count [-b]
 
-if [[ $1 = "" ]]
+if [ ${#1} = 0 ]
 then
   git shortlog -sn
 fi
 
-if [ $1 = -b ]
+if [ "$1" = -b ]
 then
   git branch | wc -l
 fi
