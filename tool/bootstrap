@@ -17,7 +17,7 @@ function config {
 }
 
 function copy {
-  if [[ $2 == "" ]]
+  if [ ${#2} = 0 ]
   then
     src=*/.[^.]*
   else
@@ -30,7 +30,7 @@ function copy {
   done
 }
 
-if [[ $1 == "" ]]
+if [ ${#1} = 0 ]
 then
   config && copy
 elif [ $1 = config ]
