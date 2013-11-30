@@ -3,7 +3,7 @@
 # Nuke git branch or tag.
 #
 # Usage:
-#   $ git nuke [-b|-t] [BRANCH|TAG]
+#   $ git nuke (-b|-t) [BRANCH|TAG]
 
 if [ $1 = -b ]
 then
