@@ -1,4 +1,4 @@
-# Check for interactivity
+# Check interactivity
 [[ $- == *i* ]] || return
 
 # Write history
