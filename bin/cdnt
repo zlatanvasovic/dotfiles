@@ -3,7 +3,6 @@
 # Count number of code lines.
 
 ignores=(.git)
-ignore=""
 for item in ${ignores[*]}
 do
   ignore="$ignore -o -name $item -prune"
