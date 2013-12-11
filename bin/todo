@@ -7,17 +7,17 @@
 #   $ todo rm TASK
 #   $ todo ls
 
-if [ $1 = add ]
+if [ "$1" = add ]
 then
   touch ~/dev/todo/$2
 fi
 
-if [ $1 = rm ]
+if [ "$1" = rm ]
 then
   rm ~/dev/todo/$2
 fi
 
-if [ $1 = ls ]
+if [ "$1" = ls ]
 then
   ls -1 ~/dev/todo
 fi
