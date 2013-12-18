@@ -1,16 +1,16 @@
 #!/bin/bash
 #
-# Nuke git branch or tag.
+# Count git commits or branches.
 #
 # Usage:
-#   $ git count [-b]
+#   $ git count (-c|-b)
 
-if [ ${#1} = 0 ]
+if [ "$1" = -c ]
 then
-  git shortlog -sn
-fi
+  # Just for newer versions
+  git rev-list HEAD --count
 
-if [ "$1" = -b ]
+elif [ "$1" = -b ]
 then
   git branch | wc -l
 fi
