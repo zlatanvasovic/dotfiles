@@ -2,6 +2,7 @@
 #
 # Count number of code lines.
 
+# Files to ignore
 ignores=(.git)
 for item in ${ignores[*]}
 do
