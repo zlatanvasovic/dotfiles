@@ -5,7 +5,8 @@
 *.py[co]
 
 # Project-specific directories
-_site/
-_gh_pages/
-node_modules/
-bower_components/
+_site
+_gh_pages
+node_modules
+bower_components
+.sass-cache
