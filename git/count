@@ -3,14 +3,14 @@
 # Count git commits or branches.
 #
 # Usage:
-#   $ git count (-c|-b)
+#   $ git count (c|b)
 
-if [ "$1" = -c ]
+if [ "$1" = c ]
 then
   # Just for newer versions
   git rev-list HEAD --count
 
-elif [ "$1" = -b ]
+elif [ "$1" = b ]
 then
   git branch | wc -l
 fi
