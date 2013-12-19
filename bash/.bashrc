@@ -25,12 +25,10 @@ then
   alias grep="grep --color=auto"
 fi
 
-# Text utilities
+# Aliases
 alias uncrlf="sed -i 's/\r$//'"
 alias pbcopy="xclip -sel clip"
 alias pbpaste="xclip -sel clip -o"
-
-# Helpers
 alias git="hub"
 alias rdb="rethinkdb -d .rdb"
 
