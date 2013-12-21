@@ -3,21 +3,20 @@
 # Simple todo app.
 #
 # Usage:
-#   $ todo add TASK
-#   $ todo rm TASK
 #   $ todo ls
+#   $ todo (add|rm) TASK
+
+if [ "$1" = ls ]
+then
+  ls -1 ~/dev/txt/todo
+fi
 
 if [ "$1" = add ]
 then
-  touch ~/dev/todo/$2
+  touch ~/dev/txt/todo/$2
 fi
 
 if [ "$1" = rm ]
 then
-  rm ~/dev/todo/$2
-fi
-
-if [ "$1" = ls ]
-then
-  ls -1 ~/dev/todo
+  rm ~/dev/txt/todo/$2
 fi
