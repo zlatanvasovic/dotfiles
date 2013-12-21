@@ -1,0 +1,22 @@
+#!/bin/bash
+#
+# Simple notes app.
+#
+# Usage:
+#   $ note ls
+#   $ note (add|rm) NOTE
+
+if [ "$1" = ls ]
+then
+  ls -1 ~/dev/txt/note
+fi
+
+if [ "$1" = add ]
+then
+  touch ~/dev/txt/note/$2
+fi
+
+if [ "$1" = rm ]
+then
+  rm ~/dev/txt/note/$2
+fi
