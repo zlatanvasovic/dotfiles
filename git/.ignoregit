@@ -1,10 +1,11 @@
-# Always-ignore files
+# Always-ignore
 *~
 *.old
 *.log
 *.py[co]
+tmp
 
-# Project-specific directories
+# Project-specific
 _site
 _gh_pages
 node_modules
