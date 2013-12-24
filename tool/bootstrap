@@ -7,15 +7,6 @@
 # Usage:
 #   tool/bootstrap [copy|config]
 
-function config {
-  printf "\033[1mWhat is your GitHub author name?\033[0m\n"
-  read -e git_name
-  printf "\033[1mWhat is your GitHub author e-mail?\033[0m\n"
-  read -e git_email
-  sed -e "s/NAME/$git_name/g" -e "s/EMAIL/$git_email/g" \
-  git/gitconfig.template > ~/.gitconfig
-}
-
 function copy {
   if [ ${#2} = 0 ]
   then
@@ -30,13 +21,24 @@ function copy {
   done
 }
 
+function config {
+  printf "\033[1mWhat is your GitHub author name?\033[0m\n"
+  read -e git_name
+  printf "\033[1mWhat is your GitHub author e-mail?\033[0m\n"
+  read -e git_email
+  sed -e "s/NAME/$git_name/g" -e "s/EMAIL/$git_email/g" \
+  git/gitconfig.template > ~/.gitconfig
+}
+
 if [ ${#1} = 0 ]
 then
-  config && copy
-elif [ $1 = config ]
-then
-  config
+  copy && config
+
 elif [ $1 = copy ]
 then
   copy
+
+elif [ $1 = config ]
+then
+  config
 fi
