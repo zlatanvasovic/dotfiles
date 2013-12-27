@@ -19,8 +19,13 @@ fi
 # Enable colors
 if [ -x /usr/bin/dircolors ]
 then
-  test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-  PS1="\[\033[1m\]\$\[\033[00m\] \[\033[1;34m\]\w\[\033[00m\] "
+  test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval \
+  "$(dircolors -b)"
+
+  # Set prompt
+  . ~/.dotfiles/bash/prompt
+
+  # Colorful aliases
   alias ls="ls --color=auto -p"
   alias grep="grep --color=auto"
 fi
@@ -34,4 +39,4 @@ alias rdb="rethinkdb -d .rdb"
 
 # Scripts
 PATH=${PATH}:~/.dotfiles/bin
-. ~/dev/git/smith/smith.sh
+. ~/.dotfiles/bash/ttl
