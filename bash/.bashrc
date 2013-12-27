@@ -23,7 +23,7 @@ then
   "$(dircolors -b)"
 
   # Set prompt
-  . ~/.dotfiles/bash/prompt
+  PS1="\[\033[1;35m\]%\[\033[00m\] \[\033[1;34m\]\w\[\033[00m\] "
 
   # Colorful aliases
   alias ls="ls --color=auto -p"
