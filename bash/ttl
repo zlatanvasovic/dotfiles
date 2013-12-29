@@ -14,7 +14,7 @@ function gitname {
     if [ -d "$current$directory" ]
     then
       name=$(basename `git remote show -n origin | grep Push | cut -d: -f2-`)
-      branch=`git rev-parse --abbrev-ref HEAD`
+      branch=`git rev-parse --abbrev-ref HEAD 2> /dev/null`
 
       # Submodules have a different toplevel
       if [ `git rev-parse --show-toplevel` = $current ]
