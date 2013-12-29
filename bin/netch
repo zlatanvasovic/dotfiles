@@ -2,9 +2,10 @@
 #
 # Ping with boolean.
 
-ping -c1 google.com | grep -w 0% > /tmp/netch.log
+ping -c1 google.com > /tmp/netch.log
+grep -w 0% /tmp/netch.log > /dev/null
 
-if [ $? -eq 0 ]
+if [ $? = 0 ]
 then
   printf "\n  \033[1;32mTrue!\033[0m\n\n"
 else
