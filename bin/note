@@ -6,17 +6,13 @@
 #   $ note ls
 #   $ note (add|rm) NOTE
 
-if [ "$1" = ls ]
-then
-  ls -1 ~/dev/txt/note
-fi
-
-if [ "$1" = add ]
-then
-  touch ~/dev/txt/note/$2
-fi
-
-if [ "$1" = rm ]
-then
-  rm ~/dev/txt/note/$2
-fi
+case "$1" in
+  ls)
+    ls -1 ~/dev/txt/note
+    ;;
+  add)
+    touch ~/dev/txt/note/$2
+    ;;
+  rm)
+    rm ~/dev/txt/note/$2
+esac

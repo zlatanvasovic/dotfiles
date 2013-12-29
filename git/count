@@ -5,12 +5,11 @@
 # Usage:
 #   $ git count (c|b)
 
-if [ "$1" = c ]
-then
-  # Just for newer versions
-  git rev-list HEAD --count
-
-elif [ "$1" = b ]
-then
-  git branch | wc -l
-fi
+case "$1" in
+  c)
+    # Just for newer versions
+    git rev-list HEAD --count
+    ;;
+  b)
+    git branch | wc -l
+esac

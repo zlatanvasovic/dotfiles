@@ -5,11 +5,10 @@
 # Usage:
 #   $ git nuke (-b|-t) (BRANCH|TAG)
 
-if [ "$1" = -b ]
-then
-  git branch -D $2 && git push origin :$2
-
-elif [ "$1" = -t ]
-then
-  git tag -d $2 && git push origin :refs/tags/$2
-fi
+case "$1" in
+  -b)
+    git branch -D $2 && git push origin :$2
+    ;;
+  -t)
+    git tag -d $2 && git push origin :refs/tags/$2
+esac

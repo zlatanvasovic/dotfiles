@@ -30,15 +30,13 @@ function config {
   git/gitconfig.template > ~/.gitconfig
 }
 
-if [ ${#1} = 0 ]
-then
-  copy && config
-
-elif [ $1 = copy ]
-then
-  copy
-
-elif [ $1 = config ]
-then
-  config
-fi
+case "$1" in
+  "")
+    copy && config
+    ;;
+  copy)
+    copy
+    ;;
+  config)
+    config
+esac
