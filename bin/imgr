@@ -13,7 +13,7 @@ do
   fi
 done
 
-if [ $? -eq 0 ]
+if [ $? = 0 ]
 then
   printf "\n  \033[1;32mDone.\033[0m\n\n"
 else
