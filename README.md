@@ -4,4 +4,6 @@
 
 These dotfiles are sorted in directories — categories.
 
-Licensed under the MIT license.
+## License
+
+MIT &copy; [Zlatan Vasović](https://github.com/ZDroid)
