@@ -1,4 +1,4 @@
-# Include local configuration file
+# Include configuration file
 if [ -f ~/.bashrc ]
 then
   . ~/.bashrc
