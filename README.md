@@ -2,7 +2,7 @@
 
 > @ZDroid does dotfiles
 
-These dotfiles are sorted in directories — categories.
+These dotfiles are sorted in directories &mdash; categories.
 
 ## License
 
