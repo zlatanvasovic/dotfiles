@@ -3,6 +3,7 @@
 # Turn a github.com URL into a git.io URL and copy the result to clipboard.
 #
 # Usage:
+#
 #   $ gitio URL [CODE]
 #
 # Source: https://gist.github.com/1209316

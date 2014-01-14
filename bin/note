@@ -3,8 +3,10 @@
 # Simple notes app.
 #
 # Usage:
+#
 #   $ note ls
 #   $ note (add|rm) NOTE
+#
 
 case "$1" in
   ls)

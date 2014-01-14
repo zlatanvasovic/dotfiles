@@ -5,7 +5,9 @@
 # `config()` is taken from holman/dotfiles repository.
 #
 # Usage:
+#
 #   tool/bootstrap [copy|config]
+#
 
 function copy {
   if [ ${#2} = 0 ]

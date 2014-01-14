@@ -3,7 +3,9 @@
 # Nuke git branch or tag.
 #
 # Usage:
+#
 #   $ git nuke (-b|-t) (BRANCH|TAG)
+#
 
 case "$1" in
   -b)

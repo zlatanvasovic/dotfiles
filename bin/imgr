@@ -3,7 +3,9 @@
 # Resize images.
 #
 # Usage:
+#
 #   $ imgr FORMAT WIDTH
+#
 
 for img in *.$1
 do

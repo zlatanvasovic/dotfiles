@@ -3,8 +3,10 @@
 # Simple todo app.
 #
 # Usage:
+#
 #   $ todo ls
 #   $ todo (add|rm) TASK
+#
 
 case "$1" in
   ls)

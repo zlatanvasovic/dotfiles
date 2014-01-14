@@ -3,7 +3,9 @@
 # Count git commits or branches.
 #
 # Usage:
+#
 #   $ git count (c|b)
+#
 
 case "$1" in
   c)
