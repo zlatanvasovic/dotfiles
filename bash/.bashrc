@@ -40,3 +40,4 @@ alias rdb="rethinkdb -d .rdb"
 # Scripts
 PATH=${PATH}:~/.dotfiles/bin
 . ~/.dotfiles/bash/ttl
+. /usr/local/rvm/scripts/rvm
