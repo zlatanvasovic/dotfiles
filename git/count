@@ -9,7 +9,7 @@
 
 case "$1" in
   c)
-    # Just for newer versions
+    # Reserved for newer versions
     git rev-list HEAD --count
     ;;
   b)
