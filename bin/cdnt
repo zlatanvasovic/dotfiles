@@ -9,4 +9,4 @@ do
   ignore="$ignore -o -name $item -prune"
 done
 
-find . -type f -print $ignore | xargs wc -l | awk 'END {print $1}'
+find . -type f -print $ignore | xargs wc -l | awk "END {print \$1}"
