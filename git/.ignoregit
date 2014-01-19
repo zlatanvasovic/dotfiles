@@ -2,7 +2,7 @@
 *~
 *.old
 *.log
-*.py[co]
+*.py[cod]
 tmp
 
 # Project-specific
