@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 #
-# Turn a github.com URL into a git.io URL and copy the result to clipboard.
+# Turn a (gist.)github.com URL into a git.io URL and copy the result to
+# clipboard.
 #
 # Usage:
 #
