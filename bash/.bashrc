@@ -7,7 +7,7 @@ HISTCONTROL=ignoreboth
 HISTSIZE=1000
 HISTFILESIZE=1000
 
-# Check the window size after each command
+# Check the window size
 shopt -s checkwinsize
 
 # Enable completion
@@ -22,7 +22,7 @@ then
   test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval \
   "`dircolors -b`"
 
-  # Set prompt
+  # Design prompt
   PS1="\[\033[1;35m\]%\[\033[00m\] \[\033[1;34m\]\w\[\033[00m\] "
 
   # Colorful aliases
