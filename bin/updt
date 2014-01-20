@@ -3,6 +3,6 @@
 # Update packages.
 
 sudo apt-get update && sudo apt-get upgrade -y
-sudo npm up -g
+sudo npm update -g
 sudo gem update
 sudo rm -rf ~/tmp
