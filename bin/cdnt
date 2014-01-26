@@ -3,7 +3,7 @@
 # Count number of code lines.
 
 # Files to ignore
-ignores=(.git)
+ignores=(.git node_modules)
 for item in ${ignores[*]}
 do
   ignore="$ignore -o -name $item -prune"
