@@ -4,6 +4,13 @@
 
 These dotfiles are sorted in directories &mdash; categories.
 
+## Table of contents
+
+* [Bootstrap](#bootstrap)
+* [Hack](#hack)
+* [Docs](#docs)
+* [License](#license)
+
 ## Bootstrap
 
 1. Fork repository.
