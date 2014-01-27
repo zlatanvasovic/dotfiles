@@ -10,6 +10,18 @@ These dotfiles are sorted in directories &mdash; categories.
 2. Clone your fork in `~/.dotfiles`.
 3. Navigate to `~/.dotfiles` and run `tool/bootstrap`.
 
+## Hack
+
+You can remove what you don't use and add what you do use.
+
+### Update your fork
+
+```bash
+$ git remote add upstream https://github.com/ZDroid/dotfiles
+$ git pull upstream master
+$ git push
+```
+
 ## Docs
 
 All scripts have docs, on the beginning of script, just after `#!/interpreter`.
