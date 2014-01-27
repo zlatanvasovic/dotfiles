@@ -26,9 +26,9 @@ Example:
 Usage legend:
 
 * `NAME`: argument, always written in the upper case
-* `(NAME|NAME)`: argument or argument (depends on argument before)
+* `(NAME|NAME|...)`: allowed argument values (depend on argument before)
 * `[NAME]`: optional argument
-* `[NAME|NAME]`: optional arguments (depends on argument before)
+* `[NAME|NAME]`: optional argument values (depend on argument before)
 
 ## License
 
