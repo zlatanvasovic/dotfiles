@@ -4,6 +4,12 @@
 
 These dotfiles are sorted in directories &mdash; categories.
 
+## Bootstrap
+
+1. Fork repository.
+2. Clone your fork in `~/.dotfiles`.
+3. Navigate to `~/.dotfiles` and run `tool/bootstrap`.
+
 ## Docs
 
 All scripts have docs, on the beginning of script, just after `#!/interpreter`.
