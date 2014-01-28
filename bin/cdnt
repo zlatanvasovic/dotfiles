@@ -6,7 +6,7 @@
 ignores=(.git node_modules)
 for item in ${ignores[*]}
 do
-  ignore="$ignore -o -name $item -prune"
+  ignore+=" -o -name $item -prune"
 done
 
 find . -type f -print $ignore | xargs wc -l | awk "END {print \$1}"

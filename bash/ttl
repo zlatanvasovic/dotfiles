@@ -13,7 +13,7 @@ function gitname {
   do
     if [ -d "$current$directory" ]
     then
-      name=$(basename `git remote show -n origin | grep Push | cut -d: -f2-`)
+      name=`basename $(git remote show -n origin | grep Push | cut -d: -f2-)`
       branch=`git rev-parse --abbrev-ref HEAD 2> /dev/null`
       top=`git rev-parse --show-toplevel`
 
@@ -29,7 +29,7 @@ function gitname {
       break
     fi
 
-    current=$(dirname "$current")
+    current=`dirname "$current"`
   done
 
   # Restore default terminal title
