@@ -5,7 +5,7 @@
 
 function gitname {
   directory="/.git"
-  current=`pwd -P`
+  current=$(pwd -P)
 
   # Recursively run down directories until find `.git` or are at `/`
   unset title
@@ -13,23 +13,23 @@ function gitname {
   do
     if [ -d "$current$directory" ]
     then
-      name=`basename $(git remote show -n origin | grep Push | cut -d: -f2-)`
-      branch=`git rev-parse --abbrev-ref HEAD 2> /dev/null`
-      top=`git rev-parse --show-toplevel`
+      name=$(basename $(git remote show -n origin | grep Push | cut -d: -f2-))
+      branch=$(git rev-parse --abbrev-ref HEAD 2> /dev/null)
+      top=$(git rev-parse --show-toplevel)
 
       # Submodules have a different toplevel
       if [ -z "$top" ] || [ "$top" = $current ]
       then
         title="\033]0;${name%.git} ($branch)\007"
       else
-        title="\033]0;`basename "$current"` (submodule: ${name%.git})\007"
+        title="\033]0;$(basename "$current") (submodule: ${name%.git})\007"
       fi
 
       echo -ne $title
       break
     fi
 
-    current=`dirname "$current"`
+    current=$(dirname "$current")
   done
 
   # Restore default terminal title

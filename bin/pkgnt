@@ -7,13 +7,13 @@ npm=0
 
 if which apt-get > /dev/null
 then
-  apt=`dpkg -l | grep ^ii | wc -l`
+  apt=$(dpkg -l | grep ^ii | wc -l)
   printf "\n  \033[1mapt:\033[0m   $apt\n"
 fi
 
 if which npm > /dev/null
 then
-  npm=$((`npm ls -g | wc -l` - 2))
+  npm=$(($(npm ls -g | wc -l) - 2))
   printf "  \033[1mnpm:\033[0m   $npm\n"
 fi
 
