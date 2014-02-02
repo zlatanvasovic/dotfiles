@@ -2,43 +2,114 @@
 #
 # Bootstrap dotfiles.
 #
-# `config()` is taken from the holman/dotfiles repository.
+# Part of code is taken from the holman/dotfiles repository.
 #
 # Usage:
 #
-#   tool/bootstrap [copy|config]
+#   tool/bootstrap [link|conf]
 #
 
-function copy {
-  if [ ${#2} = 0 ]
-  then
-    src=*/.[^.]*
-  else
-    src=$2/.[^.]*
-  fi
+dotfilesdir=~/.dotfiles
+
+function info {
+  printf "\n  [ \033[1;34m+\033[0m ] $1"
+}
+
+function success {
+  printf "\n  [ \033[00;32mOK\033[0m ] $1\n"
+}
+
+function fail {
+  printf "\n  [\033[0;31mFAIL\033[0m] $1\n"
+  exit
+}
+
+function user {
+  printf "\n  [ \033[0;33m?\033[0m ] $1 "
+}
+
+function dotlink {
+  info "Linking dotfiles..."
+
+  src=$dotfilesdir/*/.[^.]*
+  overwrite_all=false
+  backup_all=false
+  skip_all=false
 
   for dot in $src
   do
-    cp $dot ~/ 2> /dev/null
+    dest=~/$(basename "$dot")
+
+    if [ -f $dest ] || [ -d $dest ]
+    then
+      overwrite=false
+      backup=false
+      skip=false
+
+      if [ "$overwrite_all" == "false" ] && [ "$skip_all" == "false" ]
+      then
+        info "File already exists: `basename $dot`. What do you want to do?"
+        info "Actions: [s]kip, [S]kip all, [o]verwrite, [O]verwrite all?"
+        read -n 1 action
+
+        case "$action" in
+          o)
+            overwrite=true
+            ;;
+          O)
+            overwrite_all=true
+            ;;
+          s)
+            skip=true
+            ;;
+          S)
+            skip_all=true
+            ;;
+          *)
+            fail "Incorrect value"
+            exit 1
+            ;;
+        esac
+      fi
+
+      if [ "$overwrite" == "true" ] || [ "$overwrite_all" == "true" ]
+      then
+        rm -rf $dest
+        success "Removed $dest"
+      fi
+
+      if [ "$skip" == "false" ] && [ "$skip_all" == "false" ]
+      then
+        ln -s $dot $dest
+      else
+        success "Skipped $dot"
+      fi
+    else
+      ln -s $dot $dest
+    fi
   done
 }
 
-function config {
-  printf "\033[1mWhat is your GitHub author name?\033[0m\n"
+function dotconf {
+  info "Configuring Git..."
+
+  user "What is your GitHub author name?"
   read -e git_name
-  printf "\033[1mWhat is your GitHub author e-mail?\033[0m\n"
+
+  user "What is your GitHub author email?"
   read -e git_email
+
   sed -e "s/NAME/$git_name/g" -e "s/EMAIL/$git_email/g" \
   git/gitconfig.template > ~/.gitconfig
 }
 
 case "$1" in
   "")
-    copy && config
+    dotlink && dotconf
     ;;
-  copy)
-    copy
+  link)
+    dotlink
     ;;
-  config)
-    config
+  conf)
+    dotconf
 esac
