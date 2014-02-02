@@ -31,6 +31,9 @@ then
   alias grep="grep --color=auto"
 fi
 
+# Nicer continuation prompt
+PS2="| "
+
 # Aliases
 alias uncrlf="sed -i 's/\r$//'"
 alias pbcopy="xclip -sel clip"
