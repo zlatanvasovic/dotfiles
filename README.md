@@ -1,6 +1,6 @@
 # ~/.dotfiles
 
-> @ZDroid does dotfiles
+> @ZDroid's dotfiles
 
 These dotfiles are sorted in directories &mdash; categories.
 
