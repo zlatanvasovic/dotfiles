@@ -6,29 +6,29 @@
 #
 # Usage:
 #
-#   tool/bootstrap [link|conf]
+#   tool/bootstrap [link|gitconf]
 #
 
 dotfilesdir=~/.dotfiles
 
-function info {
-  printf "\n  [ \033[1;34m+\033[0m ] $1"
+info () {
+  printf "\n  [ \033[34m.\033[0m ] $1"
 }
 
-function success {
-  printf "\n  [ \033[00;32mOK\033[0m ] $1\n"
+success () {
+  printf "\n  [ \033[32mOK\033[0m ] $1"
 }
 
-function fail {
-  printf "\n  [\033[0;31mFAIL\033[0m] $1\n"
-  exit
+fail () {
+  printf "\n  [ \033[31mFAIL\033[0m ] $1"
+  exit 1
 }
 
-function user {
-  printf "\n  [ \033[0;33m?\033[0m ] $1 "
+question () {
+  printf "\n  [ \033[33m?\033[0m ] $1 "
 }
 
-function dotlink {
+link_dotfiles () {
   info "Linking dotfiles..."
 
   src=$dotfilesdir/*/.[^.]*
@@ -49,7 +49,7 @@ function dotlink {
       if [ "$overwrite_all" == "false" ] && [ "$skip_all" == "false" ]
       then
         info "File already exists: `basename $dot`. What do you want to do?"
-        info "Actions: [s]kip, [S]kip all, [o]verwrite, [O]verwrite all?"
+        info "Actions: [s]kip, [S]kip all, [o]verwrite, [O]verwrite all? "
         read -n 1 action
 
         case "$action" in
@@ -90,13 +90,13 @@ function dotlink {
   done
 }
 
-function dotconf {
+gitconf () {
   info "Configuring Git..."
 
-  user "What is your GitHub author name?"
+  question "What is your GitHub author name?"
   read -e git_name
 
-  user "What is your GitHub author email?"
+  question "What is your GitHub author email?"
   read -e git_email
 
   sed -e "s/NAME/$git_name/g" -e "s/EMAIL/$git_email/g" \
@@ -105,11 +105,13 @@ function dotconf {
 
 case "$1" in
   "")
-    dotlink && dotconf
+    link_dotfiles && echo && gitconf
     ;;
   link)
-    dotlink
+    link_dotfiles
     ;;
-  conf)
-    dotconf
+  gitconf)
+    gitconf
 esac
+
+echo -e "\n"
