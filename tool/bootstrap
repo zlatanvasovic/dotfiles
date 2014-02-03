@@ -11,24 +11,24 @@
 
 dotfilesdir=~/.dotfiles
 
-info () {
+info() {
   printf "\n  [ \033[34m.\033[0m ] $1"
 }
 
-success () {
+success() {
   printf "\n  [ \033[32mOK\033[0m ] $1"
 }
 
-fail () {
+fail() {
   printf "\n  [ \033[31mFAIL\033[0m ] $1"
   exit 1
 }
 
-question () {
+question() {
   printf "\n  [ \033[33m?\033[0m ] $1 "
 }
 
-link_dotfiles () {
+link_dotfiles() {
   info "Linking dotfiles..."
 
   src=$dotfilesdir/*/.[^.]*
@@ -90,7 +90,7 @@ link_dotfiles () {
   done
 }
 
-gitconf () {
+gitconf() {
   info "Configuring Git..."
 
   question "What is your GitHub author name?"
