@@ -39,9 +39,4 @@ function gitname {
   fi
 }
 
-function cd {
-  builtin cd "$@"
-  gitname
-}
-
 PROMPT_COMMAND=gitname
