@@ -4,14 +4,20 @@
 #
 # Usage:
 #
-#   $ git count (c|b)
+#   $ git count (c|ca|b)
 #
 
 case "$1" in
+  # Commits
   c)
     # Reserved for newer versions
     git rev-list HEAD --count
     ;;
+  # Commits, per authors
+  ca)
+    git shortlog -sn
+    ;;
+  # Branches
   b)
     git branch | wc -l
 esac
