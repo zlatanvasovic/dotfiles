@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Nuke git branch or tag.
+# Nuke Git branch or tag.
 #
 # Usage:
 #

@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Quick way to credit an author on the latest commit.
+# Quick way to credit an author on the latest Git commit.
 #
 # Usage:
 #

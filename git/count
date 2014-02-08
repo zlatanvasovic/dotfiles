@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Count git commits or branches.
+# Count Git commits or branches.
 #
 # Usage:
 #
