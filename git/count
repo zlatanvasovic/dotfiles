@@ -26,7 +26,6 @@ case "$1" in
 
   # Help
   *)
-    printf "\nIncorrect usage.
-      \nUsage:
+    printf "\nUsage:
       \n  $ git count (c|ca|b)\n\n"
 esac
