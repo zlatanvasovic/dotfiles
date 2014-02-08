@@ -13,11 +13,20 @@ case "$1" in
     # Reserved for newer versions
     git rev-list HEAD --count
     ;;
+
   # Commits, per authors
   ca)
     git shortlog -sn
     ;;
+
   # Branches
   b)
     git branch | wc -l
+    ;;
+
+  # Help
+  *)
+    printf "\nIncorrect usage.
+      \nUsage:
+      \n  $ git count (c|ca|b)\n\n"
 esac
