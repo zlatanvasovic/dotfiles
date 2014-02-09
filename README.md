@@ -6,11 +6,11 @@ These dotfiles are sorted in directories &mdash; categories.
 
 ## Table of contents
 
-* [Shell support](#shell-support)
-* [Bootstrap](#bootstrap)
-* [Hack](#hack)
-* [Docs](#docs)
-* [License](#license)
+- [Shell support](#shell-support)
+- [Bootstrap](#bootstrap)
+- [Hack](#hack)
+- [Docs](#docs)
+- [License](#license)
 
 ## Shell support
 
@@ -58,10 +58,10 @@ Example:
 
 Usage legend:
 
-* `NAME`: argument, always written in the upper case
-* `(NAME|NAME|...)`: allowed argument values (depend on argument before)
-* `[NAME]`: optional argument
-* `[NAME|NAME]`: optional argument values (depend on argument before)
+- `NAME`: argument, always written in the upper case
+- `(NAME|NAME|...)`: allowed argument values (depend on argument before)
+- `[NAME]`: optional argument
+- `[NAME|NAME]`: optional argument values (depend on argument before)
 
 ## License
 
