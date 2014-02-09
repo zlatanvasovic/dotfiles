@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Bootstrap dotfiles.
+# Bootstrap the dotfiles.
 #
 # Part of code is taken from the holman/dotfiles repository.
 #
