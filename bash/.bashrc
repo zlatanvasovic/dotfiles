@@ -1,3 +1,9 @@
+#!/bin/bash
+
+#
+# Bash RC configuration
+#
+
 # Check interactivity
 [[ $- == *i* ]] || return
 
@@ -26,23 +32,21 @@ then
 
   # Design prompt
   PS1="\[\033[1;35m\]%\[\033[00m\] \[\033[1;34m\]\w\[\033[00m\] "
-
-  # Colorful aliases
-  alias ls="ls --color=auto"
-  alias grep="grep --color=auto"
 fi
 
 # Nicer continuation prompt
 PS2="| "
 
-# Aliases
-alias uncrlf="sed -i 's/\r$//'"
-alias pbcopy="xclip -sel clip"
-alias pbpaste="xclip -sel clip -o"
-alias git=hub
-alias rdb="rethinkdb -d .rdb"
-
 # Scripts
 PATH+=:~/.dotfiles/bin
-. ~/.dotfiles/bash/ttl
-. /usr/local/rvm/scripts/rvm
+
+# Load helpers
+bash_helpers=(
+  /usr/local/rvm/scripts/rvm    # RVM
+  ~/.dotfiles/bash/bash_aliases # Aliases
+  ~/.dotfiles/bash/bash_title   # Title
+)
+for helper in ${bash_helpers[*]}
+do
+  . $helper
+done

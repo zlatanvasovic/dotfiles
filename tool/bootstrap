@@ -9,8 +9,6 @@
 #   tool/bootstrap [link|gitconf]
 #
 
-dotfilesdir=~/.dotfiles
-
 info() {
   printf "\n  [ \033[34m.\033[0m ] $1"
 }
@@ -31,7 +29,7 @@ ask() {
 link_dotfiles() {
   info "Linking dotfiles..."
 
-  src=$dotfilesdir/*/.[^.]*
+  src=~/.dotfiles/*/.[^.]*
   overwrite_all=false
   backup_all=false
   skip_all=false

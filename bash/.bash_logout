@@ -1,3 +1,9 @@
+#!/bin/bash
+
+#
+# Bash configuration on logout
+#
+
 # Clear the screen to increase privacy when leaving the console
 if [ "$SHLVL" = 1 ]
 then

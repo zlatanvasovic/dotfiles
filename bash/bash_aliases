@@ -1,0 +1,16 @@
+#!/bin/bash
+
+#
+# Bash aliases
+#
+
+# General
+alias ls="ls --color=auto -p"
+alias grep="grep --color=auto"
+alias git=hub
+alias rdb="rethinkdb -d .rdb"
+
+# Utilities
+alias uncrlf="sed -i 's/\r$//'"
+alias pbcopy="xclip -sel clip"
+alias pbpaste="xclip -sel clip -o"
