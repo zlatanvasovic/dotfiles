@@ -29,13 +29,7 @@ then
   [ -r ~/.dircolors ] && eval "$(dircolors -b ~/.dircolors)" || eval \
   "$(dircolors -b)"
   colors_support=true
-
-  # Design prompt
-  PS1="\[\033[1;35m\]%\[\033[00m\] \[\033[1;34m\]\w\[\033[00m\] "
 fi
-
-# Nicer continuation prompt
-PS2="| "
 
 # Scripts
 PATH+=:~/.dotfiles/bin
@@ -43,8 +37,7 @@ PATH+=:~/.dotfiles/bin
 # Load helpers
 bash_helpers=(
   /usr/local/rvm/scripts/rvm    # RVM
-  ~/.dotfiles/bash/bash_aliases # Aliases
-  ~/.dotfiles/bash/bash_title   # Title
+  ~/.dotfiles/bash/bash_*       # Bash stuff
 )
 for helper in ${bash_helpers[*]}
 do
