@@ -1,0 +1,8 @@
+#!/bin/bash
+
+#
+# Bash paths
+#
+
+# Scripts
+PATH+=:~/.dotfiles/bin

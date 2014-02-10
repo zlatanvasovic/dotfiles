@@ -31,9 +31,6 @@ then
   colors_support=true
 fi
 
-# Scripts
-PATH+=:~/.dotfiles/bin
-
 # Load helpers
 bash_helpers=(
   /usr/local/rvm/scripts/rvm    # RVM
