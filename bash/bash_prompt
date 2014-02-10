@@ -5,7 +5,7 @@
 #
 
 # Main prompt
-if [ $colors_support = true ]
+if [ "$colors_support" = true ]
 then
   PS1="\[\033[1;35m\]%\[\033[00m\] \[\033[1;34m\]\w\[\033[00m\] "
 fi
