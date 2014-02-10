@@ -1,9 +1,11 @@
 #!/bin/bash
-#
-# Define terminal title.
-# `gitname` is based on the Smith (https://github.com/Swaagie/smith).
 
-function gitname {
+#
+# Bash terminal title
+#
+
+# `gitname` is based on the Smith (https://github.com/Swaagie/smith)
+function git_title {
   directory="/.git"
   current=$(pwd -P)
 
@@ -39,4 +41,4 @@ function gitname {
   fi
 }
 
-PROMPT_COMMAND=gitname
+PROMPT_COMMAND=git_title
