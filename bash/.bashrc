@@ -20,8 +20,9 @@ fi
 # Enable colors
 if [ -x /usr/bin/dircolors ]
 then
-  test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval \
+  [ -r ~/.dircolors ] && eval "$(dircolors -b ~/.dircolors)" || eval \
   "$(dircolors -b)"
+  color_support=true
 
   # Design prompt
   PS1="\[\033[1;35m\]%\[\033[00m\] \[\033[1;34m\]\w\[\033[00m\] "
