@@ -14,7 +14,7 @@ case "$1" in
     git rev-list HEAD --count
     ;;
 
-  # Commits, per authors
+  # Number of commits by author
   ca)
     git shortlog -sn
     ;;
