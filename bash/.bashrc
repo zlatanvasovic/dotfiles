@@ -33,8 +33,8 @@ fi
 
 # Load helpers
 bash_helpers=(
-  /usr/local/rvm/scripts/rvm    # RVM
-  ~/.dotfiles/bash/bash_*       # Bash stuff
+  /usr/local/rvm/scripts/rvm  # RVM
+  ~/.dotfiles/bash/bash_*     # Bash stuff
 )
 for helper in ${bash_helpers[*]}
 do
