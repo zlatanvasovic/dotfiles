@@ -6,7 +6,11 @@
 
 # General
 alias git=hub
-alias rdb="rethinkdb -d .rdb"
+
+if which rethinkdb > /dev/null
+then
+  alias rdb="rethinkdb -d .rdb"
+fi
 
 # Just with colors
 if [ "$colors_support" = true ]
@@ -17,5 +21,9 @@ fi
 
 # Utilities
 alias uncrlf="sed -i 's/\r$//'"
-alias pbcopy="xclip -sel clip"
-alias pbpaste="xclip -sel clip -o"
+
+if which xclip > /dev/null
+then
+  alias pbcopy="xclip -sel clip"
+  alias pbpaste="xclip -sel clip -o"
+fi
