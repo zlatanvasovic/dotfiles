@@ -7,16 +7,6 @@
 # Check interactivity
 [[ $- == *i* ]] || return
 
-# Write history
-shopt -s histappend
-HISTSIZE=500
-HISTFILESIZE=500
-HISTCONTROL=ignoreboth
-HISTTIMEFORMAT="%h %d %H:%M:%S "
-
-# Check the window size
-shopt -s checkwinsize
-
 # Enable completion
 if [ -f /etc/bash_completion ] && ! shopt -oq posix
 then
