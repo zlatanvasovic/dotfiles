@@ -5,7 +5,7 @@
 #
 
 # `gitname` is based on the Smith (https://github.com/Swaagie/smith)
-function git_title {
+git_title() {
   directory="/.git"
   current=$(pwd -P)
 
