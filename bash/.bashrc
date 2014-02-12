@@ -24,10 +24,14 @@ then
 fi
 
 # Enable colors
-if [ -x /usr/bin/dircolors ]
+if which dircolors > /dev/null
 then
-  [ -r ~/.dircolors ] && eval "$(dircolors -b ~/.dircolors)" || eval \
-  "$(dircolors -b)"
+  if [ -r ~/.dircolors ]
+  then
+    eval "$(dircolors -b ~/.dircolors)"
+  else
+    eval "$(dircolors -b)"
+  fi
   colors_support=true
 fi
 
