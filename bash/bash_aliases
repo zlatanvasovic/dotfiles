@@ -8,7 +8,7 @@
 alias git=hub
 alias rdb="rethinkdb -d .rdb"
 
-# Just if there is a color support
+# Just with colors
 if [ "$colors_support" = true ]
 then
   alias ls="ls --color=auto"
