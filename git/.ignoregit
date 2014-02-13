@@ -2,12 +2,13 @@
 *~
 *.old
 *.log
-*.py[cod]
+*.py[cdo]
 tmp
 
 # Project-specific
 _site
 _gh_pages
+.sass-cache
+.ruby-version
 node_modules
 bower_components
-.sass-cache
