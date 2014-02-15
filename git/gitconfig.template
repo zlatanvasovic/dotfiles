@@ -1,20 +1,21 @@
 [alias]
-	all = add -A
-	amend = commit --amend -C HEAD
-	ci = commit
-	co = checkout
-	count = !~/.dotfiles/git/count
-	credit = !~/.dotfiles/git/credit
-	nuke = !~/.dotfiles/git/nuke
-	st = status -sb
-    stat = diff --stat
+  all = add -A
+  amend = commit --amend -C HEAD
+  br = branch
+  ci = commit
+  co = checkout
+  count = !~/.dotfiles/git/count
+  credit = !~/.dotfiles/git/credit
+  nuke = !~/.dotfiles/git/nuke
+  st = status -sb
+  stat = diff --stat
 [color]
-	ui = auto
+  ui = auto
 [core]
-	editor = gedit
-	excludesfile = ~/.ignoregit
+  editor = gedit
+  excludesfile = ~/.ignoregit
 [push]
-	default = simple
+  default = simple
 [user]
-	email = EMAIL
-	name = NAME
+  email = EMAIL
+  name = NAME
