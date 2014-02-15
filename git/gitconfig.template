@@ -2,11 +2,13 @@
   all = add -A
   amend = commit --amend -C HEAD
   br = branch
+  cbr = !git rev-parse --abbrev-ref HEAD 2> /dev/null
   ci = commit
   co = checkout
   count = !~/.dotfiles/git/count
   credit = !~/.dotfiles/git/credit
   nuke = !~/.dotfiles/git/nuke
+  pullup = !git pull upstream $(git cbr)
   st = status -sb
   stat = diff --stat
 [color]
