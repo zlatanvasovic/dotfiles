@@ -97,8 +97,8 @@ gitconf() {
   ask "What is your GitHub author email?"
   read -e git_email
 
-  sed -e "s/NAME/$git_name/g" -e "s/EMAIL/$git_email/g" \
-  git/gitconfig.template > ~/.gitconfig
+  sed -e "s/NAME/$git_name/g" -e "s/EMAIL/$git_email/g" git/gitconfig \
+  > ~/.gitconfig
 }
 
 case "$1" in
