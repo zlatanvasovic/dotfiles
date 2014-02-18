@@ -2,7 +2,19 @@
 #
 # Update packages.
 
-sudo apt-get update && sudo apt-get upgrade -y
-sudo npm update -g
-sudo gem update
+if which apt-get > /dev/null
+then
+  sudo apt-get update && sudo apt-get upgrade -y
+fi
+
+if which npm > /dev/null
+then
+  sudo npm update -g
+fi
+
+if which gem > /dev/null
+then
+  sudo gem update
+fi
+
 sudo rm -rf ~/tmp
