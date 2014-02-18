@@ -6,7 +6,7 @@
 #
 # Usage:
 #
-#   $ tool/bootstrap [link|gitconf]
+#   $ tool/bootstrap [link|git]
 #
 
 info() {
