@@ -9,6 +9,7 @@
   credit = !~/.dotfiles/git/credit
   nuke = !~/.dotfiles/git/nuke
   pullup = !git pull upstream $(git cbr)
+  pushup = !git push origin $(git cbr) --set-upstream
   st = status -sb
   stat = diff --stat
 [color]
