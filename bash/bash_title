@@ -4,41 +4,45 @@
 # Bash terminal title
 #
 
-# `gitname` is based on the Smith (https://github.com/Swaagie/smith)
-git_title() {
-  directory="/.git"
-  current=$(pwd -P)
+if which git > /dev/null
+then
+  # Get `.git/` informations
+  # Source: Smith (https://github.com/Swaagie/smith)
+  git_title() {
+    directory="/.git"
+    current=$(pwd -P)
 
-  # Recursively run down directories until find `.git` or are at `/`
-  unset title
-  until [ "$current" = "/" ]
-  do
-    if [ -d "$current$directory" ]
-    then
-      name=$(basename $(git remote show -n origin | grep Push | cut -d: -f2-))
-      branch=$(git rev-parse --abbrev-ref HEAD 2> /dev/null)
-      top=$(git rev-parse --show-toplevel)
-
-      # Submodules have a different toplevel
-      if [ -z "$top" ] || [ "$top" = $current ]
+    # Recursively run down directories until find `.git/` or are at `/`
+    unset title
+    until [ "$current" = "/" ]
+    do
+      if [ -d "$current$directory" ]
       then
-        title="\033]0;${name%.git} ($branch)\007"
-      else
-        title="\033]0;$(basename "$current") (submodule: ${name%.git})\007"
+        name=$(basename $(git remote show -n origin | grep Push | cut -d: -f2-))
+        branch=$(git rev-parse --abbrev-ref HEAD 2> /dev/null)
+        top=$(git rev-parse --show-toplevel)
+
+        # Submodules have a different toplevel
+        if [ -z "$top" ] || [ "$top" = $current ]
+        then
+          title="\033]0;${name%.git} ($branch)\007"
+        else
+          title="\033]0;$(basename "$current") (submodule: ${name%.git})\007"
+        fi
+
+        echo -ne $title
+        break
       fi
 
-      echo -ne $title
-      break
+      current=$(dirname "$current")
+    done
+
+    # Restore default terminal title
+    if [ -z "$title" ]
+    then
+      echo -ne "\033]0;Terminal\007"
     fi
+  }
 
-    current=$(dirname "$current")
-  done
-
-  # Restore default terminal title
-  if [ -z "$title" ]
-  then
-    echo -ne "\033]0;Terminal\007"
-  fi
-}
-
-PROMPT_COMMAND=git_title
+  PROMPT_COMMAND+="git_title;"
+fi

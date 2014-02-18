@@ -89,16 +89,21 @@ link_dotfiles() {
 }
 
 gitconf() {
-  info "Configuring Git..."
+  if which git > /dev/null
+  then
+    info "Configuring Git..."
 
-  ask "What is your GitHub author name?"
-  read -e git_name
+    ask "What is your GitHub author name?"
+    read -e git_name
 
-  ask "What is your GitHub author email?"
-  read -e git_email
+    ask "What is your GitHub author email?"
+    read -e git_email
 
-  sed -e "s/NAME/$git_name/g" -e "s/EMAIL/$git_email/g" git/gitconfig \
-  > ~/.gitconfig
+    sed -e "s/NAME/$git_name/g" -e "s/EMAIL/$git_email/g" git/gitconfig \
+    > ~/.gitconfig
+  else
+    info "You don't have Git installed."
+  fi
 }
 
 case "$1" in
@@ -108,7 +113,7 @@ case "$1" in
   link)
     link_dotfiles
     ;;
-  gitconf)
+  git)
     gitconf
 esac
 

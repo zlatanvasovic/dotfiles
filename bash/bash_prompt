@@ -19,3 +19,6 @@ then
 else
   PS2="| "
 fi
+
+# Reset prompt command
+PROMPT_COMMAND=
