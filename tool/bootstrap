@@ -10,20 +10,25 @@
 #
 
 info() {
-  printf "\n  [ \033[34m.\033[0m ] $1"
+  printf "\n  \033[36m$1\033[0m"
 }
 
 success() {
-  printf "\n  [ \033[32mOK\033[0m ] $1"
+  printf "\n  \033[32m$1\033[0m"
 }
 
 fail() {
-  printf "\n  [ \033[31mFAIL\033[0m ] $1"
+  printf "\n  \033[31m$1\033[0m"
   exit 1
 }
 
 ask() {
-  printf "\n  [ \033[33m?\033[0m ] $1 "
+  printf "\n  \033[33m$1\033[0m "
+}
+
+link_dotfile() {
+  ln -s $1 $2
+  success "Linked $1 to $2"
 }
 
 link_dotfiles() {
@@ -64,7 +69,7 @@ link_dotfiles() {
             skip_all=true
             ;;
           *)
-            fail "Incorrect value"
+            fail "Incorrect value\n"
             exit 1
             ;;
         esac
@@ -78,12 +83,12 @@ link_dotfiles() {
 
       if [ "$skip" == "false" ] && [ "$skip_all" == "false" ]
       then
-        ln -s $dot $dest
+        link_dotfile $dot $dest
       else
         success "Skipped $dot"
       fi
     else
-      ln -s $dot $dest
+      link_dotfiles $dot $dest
     fi
   done
 }
