@@ -7,12 +7,6 @@
 # Check interactivity
 [[ $- == *i* ]] || return
 
-# Enable completion
-if [ -f /etc/bash_completion ] && ! shopt -oq posix
-then
-  . /etc/bash_completion
-fi
-
 # Enable colors
 if which dircolors > /dev/null
 then
@@ -33,6 +27,7 @@ bash_helpers=(
   ~/.dotfiles/bash/bash_paths   # Bash paths
   ~/.dotfiles/bash/bash_prompt  # Bash prompt
   ~/.dotfiles/bash/bash_title   # Bash terminal title
+  /etc/bash_completion          # Bash completion
 )
 for helper in ${bash_helpers[*]}
 do
