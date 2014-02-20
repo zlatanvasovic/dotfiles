@@ -37,6 +37,8 @@ $ git pull upstream master
 $ git push
 ```
 
+You can use `git pullup` alias as replacement for `git pull upstream BRANCH`.
+
 ## Docs
 
 All scripts have docs, on the beginning of script, just after `#!/interpreter`.
