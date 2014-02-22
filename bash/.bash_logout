@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #
-# Bash configuration on logout
+# Bash logout configuration
 #
 
 # Clear the screen to increase privacy when leaving the console
