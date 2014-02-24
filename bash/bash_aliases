@@ -5,12 +5,9 @@
 #
 
 # General
-if which git > /dev/null
+if which git hub > /dev/null
 then
-  if which hub > /dev/null
-  then
-    alias git=hub
-  fi
+  alias git=hub
 fi
 
 if which rethinkdb > /dev/null
