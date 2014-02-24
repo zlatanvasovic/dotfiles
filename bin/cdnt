@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Count number of code lines.
+# Count code lines.
 
 # Files to ignore
 ignores=(.git node_modules)
