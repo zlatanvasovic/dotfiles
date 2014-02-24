@@ -9,7 +9,7 @@ shopt -s histappend
 HISTSIZE=500
 HISTFILESIZE=500
 HISTCONTROL=ignoreboth
-HISTTIMEFORMAT="%h %d %H:%M:%S "
+HISTTIMEFORMAT="%D %H:%M:%S "
 
 # Check the window size
 shopt -s checkwinsize
