@@ -42,7 +42,7 @@ You can use `git pullup` alias as replacement for
 
 ## Docs
 
-All scripts have docs, on the beginning of script, just after `#!/interpreter`.
+All scripts have docs on the start, just after the `#!/interpreter`.
 
 Example:
 
