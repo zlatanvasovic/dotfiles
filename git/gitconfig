@@ -15,6 +15,7 @@
 [color]
   ui = auto
 [core]
+  attributesfile = ~/.dotfiles/git/gitattributes
   editor = gedit
   excludesfile = ~/.dotfiles/git/gitignore
 [push]
