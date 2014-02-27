@@ -1,25 +1,47 @@
+# Aliases
 [alias]
-  all = add -A
-  amend = commit --amend -C HEAD
+  # Command shorthands
   br = branch
-  cbr = !git rev-parse --abbrev-ref HEAD 2> /dev/null
   ci = commit
   co = checkout
+  st = status -sb
+  stat = diff --stat
+
+  # Print current branch name
+  cbr = !git rev-parse --abbrev-ref HEAD 2> /dev/null
+
+  # Stage all changes
+  all = add -A
+
+  # Amend changes to the previous commit
+  amend = commit --amend -C HEAD
+
+  # Pull changes from the upstream
+  pullup = !git pull upstream $(git cbr)
+
+  # Push and track the branch
+  pushup = !git push origin $(git cbr) --set-upstream
+
+  # Additional scripts
   count = !~/.dotfiles/git/count
   credit = !~/.dotfiles/git/credit
   nuke = !~/.dotfiles/git/nuke
-  pullup = !git pull upstream $(git cbr)
-  pushup = !git push origin $(git cbr) --set-upstream
-  st = status -sb
-  stat = diff --stat
+
+# Colors
 [color]
   ui = auto
+
+# Environment
 [core]
   attributesfile = ~/.dotfiles/git/gitattributes
   editor = gedit
   excludesfile = ~/.dotfiles/git/gitignore
+
+# Publishing
 [push]
   default = simple
+
+# User
 [user]
   email = EMAIL
   name = NAME
