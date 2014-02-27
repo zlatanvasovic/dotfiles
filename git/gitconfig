@@ -16,7 +16,7 @@
   ui = auto
 [core]
   editor = gedit
-  excludesfile = ~/.dotfiles/git/ignoregit
+  excludesfile = ~/.dotfiles/git/gitignore
 [push]
   default = simple
 [user]
