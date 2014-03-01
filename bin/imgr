@@ -7,17 +7,14 @@
 #   $ imgr FORMAT WIDTH
 #
 
+set -e
+
 for img in *.$1
 do
   if ! [[ $img == *-resized* ]]
   then
     convert $img -resize $2 ${img%%.*}-resized.${img#*.} > /tmp/imgr.log
   fi
-done
 
-if [ $? = 0 ]
-then
   printf "\n  \033[1;32mDone.\033[0m\n\n"
-else
-  printf "\n  \033[1;31mUndone.\033[0m\n\n"
-fi
+done
