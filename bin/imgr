@@ -22,7 +22,7 @@ for img in *.$ext
 do
   if ! [[ $img == *-resized* ]]
   then
-    convert $img -resize $width ${img%%.*}-resized.${img#*.} > /tmp/imgr.log
+    convert $img -resize $width ${img%%.*}-resized.${img#*.} &> /tmp/imgr.log
   fi
 done
 
