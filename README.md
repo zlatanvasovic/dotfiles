@@ -53,8 +53,8 @@ Example:
 #
 # Usage:
 #
-#   $ mycmd ARG
-#   $ mycmd (ARG1|ARG2) (ARG2|ARG3)
+#   $ command ARG
+#   $ command (ARG1|ARG2) (ARG2|ARG3)
 #
 # Source: http://example.com
 ```
