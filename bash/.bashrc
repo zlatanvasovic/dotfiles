@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #
-# Bash RC configuration
+# Bash configuration
 #
 
 # Check interactivity
