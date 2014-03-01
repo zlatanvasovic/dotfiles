@@ -3,7 +3,14 @@
 # Count code lines.
 
 # Files to ignore
-ignores=(.git node_modules)
+ignores=(
+  .git
+  .sass-cache
+  _site
+  _gh_pages
+  bower_components
+  node_modules
+)
 for item in ${ignores[*]}
 do
   ignore+=" -o -name $item -prune"
