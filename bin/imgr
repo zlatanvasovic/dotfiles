@@ -4,17 +4,29 @@
 #
 # Usage:
 #
-#   $ imgr FORMAT WIDTH
+#   $ imgr [EXT] [WIDTH]
 #
+# If you want to only change width, set EXT to "".
 
 set -e
 
-for img in *.$1
+# Set defaults
+ext=png
+width=200
+
+# Load configuration from command arguments
+! [ ${#1} = 0 ] && ext=$1
+! [ ${#2} = 0 ] && width=$2
+
+for img in *.$ext
 do
   if ! [[ $img == *-resized* ]]
   then
-    convert $img -resize $2 ${img%%.*}-resized.${img#*.} > /tmp/imgr.log
+    convert $img -resize $width ${img%%.*}-resized.${img#*.} > /tmp/imgr.log
   fi
-
-  printf "\n  \033[1;32mDone.\033[0m\n\n"
 done
+
+if [ $? = 0 ]
+then
+  printf "\n  \033[1;32mDone.\033[0m\n\n"
+fi
