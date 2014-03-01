@@ -37,7 +37,7 @@ $ git pull upstream master
 $ git push
 ```
 
-You can use `git pullup` alias as replacement for
+You can use `git pullup` alias as an alias for
 `git pull upstream CURRENT_BRANCH`.
 
 ## Docs
