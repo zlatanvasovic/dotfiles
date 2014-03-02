@@ -4,17 +4,16 @@
 #
 # Usage:
 #
-#   $ todo ls
-#   $ todo (add|rm) TASK
+#   $ todo [add|rm] [TASK]
 #
 
 case "$1" in
-  ls)
-    ls -1 ~/dev/txt/todo
-    ;;
   add)
     touch ~/dev/txt/todo/$2
     ;;
   rm)
     rm ~/dev/txt/todo/$2
+    ;;
+  *)
+    ls -1 ~/dev/txt/todo
 esac

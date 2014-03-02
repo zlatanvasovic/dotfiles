@@ -4,17 +4,16 @@
 #
 # Usage:
 #
-#   $ note ls
-#   $ note (add|rm) NOTE
+#   $ note [add|rm] [NOTE]
 #
 
 case "$1" in
-  ls)
-    ls -1 ~/dev/txt/note
-    ;;
   add)
     touch ~/dev/txt/note/$2
     ;;
   rm)
     rm ~/dev/txt/note/$2
+    ;;
+  *)
+    ls -1 ~/dev/txt/note
 esac
