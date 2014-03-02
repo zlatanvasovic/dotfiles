@@ -4,14 +4,6 @@
 
 These dotfiles are sorted in directories &mdash; categories.
 
-## Table of contents
-
-- [Shell support](#shell-support)
-- [Bootstrap](#bootstrap)
-- [Hack](#hack)
-- [Docs](#docs)
-- [License](#license)
-
 ## Shell support
 
 These dotfiles are meant to be used with newer versions of Bash. Also, your
