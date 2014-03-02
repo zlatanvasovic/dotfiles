@@ -8,15 +8,30 @@ npm=0
 if which apt-get > /dev/null
 then
   apt=$(dpkg -l | grep ^ii | wc -l)
-  printf "\n  \033[1mapt:\033[0m   $apt\n"
 fi
 
 if which npm > /dev/null
 then
   npm=$(($(npm ls -g | wc -l) - 2))
-  printf "  \033[1mnpm:\033[0m   $npm\n"
 fi
 
 total=$(($apt + $npm))
 
-printf "\n  \033[1mtotal:\033[0m $total\n\n"
+case "$1" in
+  hyde)
+    if [ $total -gt 2000 ]
+    then
+      echo "You have too many packages."
+    elif [ $total -gt 1000 ]
+    then
+      echo "You have a regular amount of packages."
+    else
+      echo "You have a small amount of packages."
+    fi
+    ;;
+
+  *)
+    printf "\n  \033[1mapt:\033[0m   $apt\n"
+    printf "  \033[1mnpm:\033[0m   $npm\n"
+    printf "\n  \033[1mtotal:\033[0m $total\n\n"
+esac
