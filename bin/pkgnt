@@ -1,6 +1,11 @@
 #!/bin/bash
 #
 # Count installed packages.
+#
+# Usage:
+#
+#   $ pkgnt [hyde]
+#
 
 apt=0
 npm=0
