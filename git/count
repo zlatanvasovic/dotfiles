@@ -8,14 +8,14 @@
 #
 
 case "$1" in
-  # Number of commits by author
-  ca)
-    git shortlog -sn
-    ;;
-
   # Branches
   b)
     git branch | wc -l
+    ;;
+
+  # Commits by author
+  ca)
+    git shortlog -sn
     ;;
 
   # Commits
