@@ -4,16 +4,10 @@
 #
 # Usage:
 #
-#   $ git count (c|ca|b)
+#   $ git count [ca|b]
 #
 
 case "$1" in
-  # Commits
-  c)
-    # Reserved for newer versions
-    git rev-list HEAD --count
-    ;;
-
   # Number of commits by author
   ca)
     git shortlog -sn
@@ -24,8 +18,8 @@ case "$1" in
     git branch | wc -l
     ;;
 
-  # Help
+  # Commits
   *)
-    printf "\nUsage:
-      \n  $ git count (c|ca|b)\n\n"
+    # Reserved for newer versions
+    git rev-list HEAD --count
 esac
