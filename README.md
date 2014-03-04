@@ -55,7 +55,7 @@ Usage legend:
 - `NAME`: argument, always written in the upper case
 - `(NAME|NAME|...)`: allowed argument values (depend on argument before)
 - `[NAME]`: optional argument
-- `[NAME|NAME]`: optional argument values (depend on argument before)
+- `[NAME|NAME|...]`: optional argument values (depend on argument before)
 
 ## License
 
