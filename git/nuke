@@ -4,13 +4,17 @@
 #
 # Usage:
 #
-#   $ git nuke (-b|-t) (BRANCH|TAG)
+#   $ git nuke BRANCH
+#   $ git nuke -t TAG
 #
 
 case "$1" in
-  -b)
-    git branch -D $2 && git push origin :$2
-    ;;
+  # Tag
   -t)
     git tag -d $2 && git push origin :refs/tags/$2
+    ;;
+
+  # Branch
+  *)
+    git branch -D $1 && git push origin :$1
 esac
