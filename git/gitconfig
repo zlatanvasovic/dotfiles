@@ -4,7 +4,7 @@
   br = branch
   ci = commit
   co = checkout
-  st = status -sb
+  st = status -sb # Cleaner status view
   stat = diff --stat
 
   # Print current branch name
@@ -37,7 +37,7 @@
   editor = gedit
   excludesfile = ~/.dotfiles/git/gitignore
 
-# Publishing
+# Remotes
 [push]
   default = simple
 
