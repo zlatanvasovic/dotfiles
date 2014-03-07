@@ -4,7 +4,7 @@
 #
 # Usage:
 #
-#   $ git count [ca|b]
+#   $ git count [b|ca]
 #
 
 case "$1" in
