@@ -33,9 +33,15 @@
 
 # Environment
 [core]
+  # Configuration files
   attributesfile = ~/.dotfiles/git/gitattributes
-  editor = gedit
   excludesfile = ~/.dotfiles/git/gitignore
+
+  # Whitespace
+  autocrlf = input
+
+  # Editor
+  editor = gedit
 
 # Remotes
 [push]
