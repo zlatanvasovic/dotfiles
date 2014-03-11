@@ -34,7 +34,6 @@
 # Environment
 [core]
   # Configuration files
-  attributesfile = ~/.dotfiles/git/gitattributes
   excludesfile = ~/.dotfiles/git/gitignore
 
   # Whitespace
