@@ -28,7 +28,7 @@ ask() {
 
 link_dotfile() {
   ln -s $1 $2
-  success "Linked $1 to $2"
+  success "Linked $1 to $2."
 }
 
 link_dotfiles() {
