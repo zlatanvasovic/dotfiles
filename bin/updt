@@ -2,6 +2,8 @@
 #
 # Update packages.
 
+set -e
+
 if which apt-get > /dev/null
 then
   sudo apt-get update && sudo apt-get upgrade -y
