@@ -5,12 +5,12 @@
 #
 
 # General
-if which git hub > /dev/null
+if [ $(which git) ] && [ $(which hub) ]
 then
   alias git=hub
 fi
 
-if which rethinkdb > /dev/null
+if [ $(which rethinkdb) ]
 then
   alias rdb="rethinkdb -d .rdb"
 fi
@@ -25,7 +25,7 @@ fi
 # Utilities
 alias uncrlf="sed -i 's/\r$//'"
 
-if which xclip > /dev/null
+if [ $(which xclip) ]
 then
   alias pbcopy="xclip -sel clip"
   alias pbpaste="xclip -sel clip -o"

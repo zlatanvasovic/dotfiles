@@ -8,7 +8,7 @@
 [[ $- == *i* ]] || return
 
 # Enable colors
-if which dircolors > /dev/null
+if [ $(which dircolors) ]
 then
   if [ -r ~/.dircolors ]
   then

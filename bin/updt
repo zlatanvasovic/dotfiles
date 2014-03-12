@@ -4,17 +4,17 @@
 
 set -e
 
-if which apt-get > /dev/null
+if [ $(which apt-get) ]
 then
   sudo apt-get update && sudo apt-get upgrade -y
 fi
 
-if which npm > /dev/null
+if [ $(which npm) ]
 then
   sudo npm update -g
 fi
 
-if which gem > /dev/null
+if [ $(which gem) ]
 then
   sudo gem update
 fi

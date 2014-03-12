@@ -10,12 +10,12 @@
 apt=0
 npm=0
 
-if which apt-get > /dev/null
+if [ $(which apt-get) ]
 then
   apt=$(dpkg -l | grep ^ii | wc -l)
 fi
 
-if which npm > /dev/null
+if [ $(which npm) ]
 then
   npm=$(($(npm ls -g | wc -l) - 2))
 fi
