@@ -21,4 +21,4 @@ else
 fi
 
 # Reset prompt command
-PROMPT_COMMAND=
+unset PROMPT_COMMAND
