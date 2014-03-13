@@ -1,14 +1,23 @@
-# Always-ignore
+# General
 *~
 *.old
 *.log
-*.py[cdo]
 t[e]mp
 
-# Project-specific
-_site
-_gh_pages
-.sass-cache
-.ruby-version
+# node.js
 node_modules
 bower_components
+
+# Python
+*.py[cdo]
+__pycache__
+
+# Ruby
+.ruby-version
+
+# Jekyll
+_site
+_gh_pages
+
+# Sass
+.sass-cache
