@@ -23,9 +23,9 @@
   pushup = !git push origin $(git cbr) --set-upstream
 
   # Additional scripts
-  count = !~/.dotfiles/git/count
-  credit = !~/.dotfiles/git/credit
-  nuke = !~/.dotfiles/git/nuke
+  count = !~/.dotfiles/git/bin/count
+  credit = !~/.dotfiles/git/bin/credit
+  nuke = !~/.dotfiles/git/bin/nuke
 
 # Colors
 [color]
