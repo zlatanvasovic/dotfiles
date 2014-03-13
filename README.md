@@ -2,7 +2,7 @@
 
 > @ZDroid's dotfiles
 
-These dotfiles are sorted in directories &mdash; categories.
+These dotfiles are sorted by directories (categories).
 
 ## Shell support
 
