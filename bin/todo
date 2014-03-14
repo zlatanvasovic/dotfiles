@@ -4,7 +4,9 @@
 #
 # Usage:
 #
-#   $ todo [add|rm] [TASK]
+#   $ todo
+#   $ todo add TASK
+#   $ todo rm TASK
 #
 
 case "$1" in
