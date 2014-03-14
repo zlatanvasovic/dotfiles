@@ -4,7 +4,9 @@
 #
 # Usage:
 #
-#   $ note [add|rm] [NOTE]
+#   $ note
+#   $ note add NOTE
+#   $ note rm NOTE
 #
 
 case "$1" in
