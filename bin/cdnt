@@ -2,7 +2,7 @@
 #
 # Count code lines.
 
-# Files to ignore
+# Files and directories to ignore
 ignores=(
   .git
   .ruby-version
