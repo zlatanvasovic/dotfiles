@@ -75,13 +75,13 @@ link_dotfiles() {
         esac
       fi
 
-      if [ "$overwrite" == "true" ] || [ "$overwrite_all" == "true" ]
+      if [ "$overwrite" == true ] || [ "$overwrite_all" == true ]
       then
         rm -rf $dest
         success "Removed $dest"
       fi
 
-      if [ "$skip" == "false" ] && [ "$skip_all" == "false" ]
+      if [ "$skip" == false ] && [ "$skip_all" == false ]
       then
         link_dotfile $dot $dest
       else
@@ -112,14 +112,16 @@ gitconf() {
 }
 
 case "$1" in
-  "")
-    link_dotfiles && echo && gitconf
-    ;;
   link)
     link_dotfiles
     ;;
+
   git)
     gitconf
+    ;;
+
+  *)
+    link_dotfiles && echo && gitconf
 esac
 
 echo -e "\n"
