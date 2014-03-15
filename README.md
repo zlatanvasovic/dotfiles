@@ -11,7 +11,7 @@ support colors so all commands work well. I'm improving commands so you won't
 need the colors support.
 
 These dotfiles aren't for Zsh, but some scripts may work as Zsh accepts Bash
-as fallback interpreter.
+interpreter.
 
 ## Bootstrap
 
