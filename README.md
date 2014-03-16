@@ -35,7 +35,7 @@ You can use `git pullup` as an alias for `git pull upstream CURRENT_BRANCH`.
 
 ## Docs
 
-All scripts have docs on the start, just after the `#!/interpreter`.
+All scripts have docs on the start, just after the `#!<interpreter>`.
 
 Example:
 
