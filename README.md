@@ -46,8 +46,8 @@ Example:
 #
 # Usage:
 #
-#   $ command ARG
-#   $ command (ARG1|ARG2) (ARG2|ARG3)
+#   $ command ARG REQUIRED
+#   $ command ARG [OPTIONAL]
 #
 # Source: http://example.com
 ```
@@ -55,9 +55,7 @@ Example:
 Usage legend:
 
 - `NAME`: argument, always written in the upper case
-- `(NAME|NAME|...)`: allowed argument values (depend on argument before)
 - `[NAME]`: optional argument
-- `[NAME|NAME|...]`: optional argument values (depend on argument before)
 
 ## License
 
