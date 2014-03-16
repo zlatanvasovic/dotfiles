@@ -22,7 +22,7 @@
   # Push and track the branch
   pushup = !git push origin $(git cbr) --set-upstream
 
-  # Additional scripts
+  # Scripts
   count = !~/.dotfiles/git/bin/count
   credit = !~/.dotfiles/git/bin/credit
   nuke = !~/.dotfiles/git/bin/nuke
