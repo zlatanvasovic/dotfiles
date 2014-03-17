@@ -55,7 +55,8 @@ Example:
 
 Usage legend:
 
-- `NAME`: argument, always written in the upper case
+- Argument names are written in the upper case
+- `NAME`: required argument
 - `[NAME]`: optional argument
 
 ## License
