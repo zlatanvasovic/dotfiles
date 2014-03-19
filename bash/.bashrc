@@ -20,7 +20,7 @@ then
 fi
 
 # Load helpers
-bash_helpers=(
+helpers=(
   /usr/local/rvm/scripts/rvm    # RVM
   ~/.dotfiles/bash/bash_options # Bash options
   ~/.dotfiles/bash/bash_aliases # Bash aliases
@@ -29,7 +29,7 @@ bash_helpers=(
   ~/.dotfiles/bash/bash_title   # Bash terminal title
   /etc/bash_completion          # Bash completion
 )
-for helper in ${bash_helpers[*]}
+for helper in ${helpers[*]}
 do
   if [ -f $helper ]
   then
