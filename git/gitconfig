@@ -33,7 +33,7 @@
 
 # Environment
 [core]
-  # Configuration files
+  # Global `.gitignore`
   excludesfile = ~/.dotfiles/git/gitignore
 
   # Whitespace
