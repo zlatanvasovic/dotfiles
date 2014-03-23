@@ -9,6 +9,8 @@
 #   $ tool/bootstrap [link|git]
 #
 
+set -e
+
 info() {
   printf "\n  \033[36m$1\033[0m"
 }
