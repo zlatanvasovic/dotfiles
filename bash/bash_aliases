@@ -15,7 +15,7 @@ then
   alias rdb="rethinkdb -d .rdb"
 fi
 
-# Just with colors
+# Colors
 if [ "$colors_support" = true ]
 then
   alias ls="ls --color=auto"
