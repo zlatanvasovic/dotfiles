@@ -29,7 +29,7 @@ case "$1" in
       echo "You have too many packages."
     elif [ $total -gt 1000 ]
     then
-      echo "You have a regular amount of packages."
+      echo "You have a normal amount of packages."
     else
       echo "You have a small amount of packages."
     fi
