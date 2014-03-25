@@ -30,3 +30,9 @@ then
   alias pbcopy="xclip -sel clip"
   alias pbpaste="xclip -sel clip -o"
 fi
+
+# Local
+if [ -f ~/dev/git/feedstyl/feedstyl.py ]
+then
+  alias feedstyl=~/dev/git/feedstyl/feedstyl.py
+fi
