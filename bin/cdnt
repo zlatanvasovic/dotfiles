@@ -12,6 +12,7 @@ ignores=(
   bower_components
   node_modules
 )
+
 for item in ${ignores[*]}
 do
   ignore+=" -o -name $item -prune"
