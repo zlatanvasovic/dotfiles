@@ -18,7 +18,7 @@ case "$1" in
     git shortlog -sn
     ;;
 
-  # Commits
+  # Commits overall
   *)
     # Reserved for newer versions
     git rev-list HEAD --count
