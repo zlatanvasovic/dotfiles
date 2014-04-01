@@ -15,8 +15,8 @@ interpreter.
 
 ## Bootstrap
 
-1. Fork repository.
-2. Clone your fork in `~/.dotfiles`.
+1. Optional: fork repository.
+2. Clone the repository in `~/.dotfiles`.
 3. Navigate to `~/.dotfiles` and run `tool/bootstrap`.
 
 ## Hack
