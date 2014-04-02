@@ -51,7 +51,7 @@ link_dotfiles() {
       backup=false
       skip=false
 
-      if [ "$overwrite_all" == "false" ] && [ "$skip_all" == "false" ]
+      if [ "$overwrite_all" = false ] && [ "$skip_all" = false ]
       then
         info "File already exists: $(basename $dot). What do you want to do?"
         info "Actions: [s]kip, [S]kip all, [o]verwrite, [O]verwrite all? "
@@ -77,13 +77,13 @@ link_dotfiles() {
         esac
       fi
 
-      if [ "$overwrite" == true ] || [ "$overwrite_all" == true ]
+      if [ "$overwrite" = true ] || [ "$overwrite_all" = true ]
       then
         rm -rf $dest
         success "Removed $dest"
       fi
 
-      if [ "$skip" == false ] && [ "$skip_all" == false ]
+      if [ "$skip" = false ] && [ "$skip_all" = false ]
       then
         link_dotfile $dot $dest
       else
