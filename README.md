@@ -47,17 +47,16 @@ Example:
 #
 # Usage:
 #
-#   $ command ARG REQUIRED
-#   $ command ARG [OPTIONAL]
+#   $ command ARG
+#   $ command [ARG]
 #
 # Source: http://example.com
 ```
 
 Usage legend:
 
-- Argument names are written in the upper case
-- `NAME`: required argument
-- `[NAME]`: optional argument
+- `ARG`: required argument
+- `[ARG]`: optional argument
 
 ## License
 
