@@ -25,6 +25,8 @@ You can remove what you don't use and add what you do use.
 
 ### Update your fork
 
+If your fork is outdated, then you should update the fork.
+
 ```bash
 $ git remote add upstream https://github.com/ZDroid/dotfiles
 $ git pull upstream master
