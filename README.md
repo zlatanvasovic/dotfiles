@@ -7,7 +7,7 @@ These dotfiles are sorted by directories (categories).
 ## Shell support
 
 These dotfiles are meant to be used with Bash 4+. Also, your shell should
-support colors so all commands work well. I'm trying to improve scripts so
+support colors so everything works well. I'm trying to improve scripts so
 you won't need the colors support.
 
 These dotfiles aren't for Zsh, but some scripts may work as Zsh accepts Bash
