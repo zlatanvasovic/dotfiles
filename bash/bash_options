@@ -7,7 +7,7 @@
 # Write history
 shopt -s histappend
 HISTSIZE=500
-HISTFILESIZE=500
+HISTFILESIZE=1000
 HISTCONTROL=ignoreboth
 HISTTIMEFORMAT="%D %H:%M:%S "
 
