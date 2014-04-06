@@ -23,6 +23,7 @@ fi
 total=$(($apt + $npm))
 
 case "$1" in
+  # Hyde option for analyze
   hyde)
     if [ $total -gt 2000 ]
     then
@@ -35,6 +36,7 @@ case "$1" in
     fi
     ;;
 
+  # Overall count
   *)
     printf "\n  \033[1mapt:\033[0m   $apt\n"
     printf   "  \033[1mnpm:\033[0m   $npm\n"
