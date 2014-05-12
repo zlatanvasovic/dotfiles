@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Ping with boolean.
+# Ping with boolean output.
 
 if [ "$(ping -c1 google.com | grep -w 0%)" ]
 then
