@@ -46,7 +46,7 @@
 [push]
   default = simple
 
-# User
+# User information
 [user]
   email = EMAIL
   name = NAME
