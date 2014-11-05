@@ -15,7 +15,8 @@ interpreter.
 
 ## Bootstrap
 
-1. Optional: fork repository.
+1. Fork repository. Maybe you won't need to modify anything, but your needs can
+change.
 2. Clone the repository in `~/.dotfiles`.
 3. Navigate to `~/.dotfiles` and run `tool/bootstrap`.
 
