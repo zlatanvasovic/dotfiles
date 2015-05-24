@@ -6,3 +6,6 @@
 
 # Scripts
 PATH+=:~/.dotfiles/bin
+
+# Go (I'm using it for Hub)
+PATH+=:/usr/local/go/bin

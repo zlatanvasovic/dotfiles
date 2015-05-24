@@ -13,7 +13,7 @@ scripts may work as Zsh accepts Bash interpreter.
 
 1. Fork repository. Maybe you won't need to modify anything, but your needs can
 change.
-2. Clone the repository in `~/.dotfiles`.
+2. Clone the repository to `~/.dotfiles`.
 3. Navigate to `~/.dotfiles` and run `tool/bootstrap`.
 
 ## Hack
