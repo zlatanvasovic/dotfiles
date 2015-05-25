@@ -28,6 +28,7 @@ helpers=(
   ~/.dotfiles/bash/bash_prompt  # Bash prompt
   ~/.dotfiles/bash/bash_title   # Bash terminal title
   /etc/bash_completion          # Bash completion
+  ~/.bash_private               # Private stuff
 )
 for helper in ${helpers[*]}
 do
