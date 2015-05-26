@@ -23,7 +23,7 @@ fi
 total=$(($apt + $npm))
 
 case "$1" in
-  # Hyde option for analyze
+  # Hyde option for analysis
   hyde)
     if [ $total -gt 2000 ]
     then
@@ -32,7 +32,7 @@ case "$1" in
     then
       echo "You have a normal amount of packages."
     else
-      echo "You have a little of packages."
+      echo "You have too few packages."
     fi
     ;;
 
