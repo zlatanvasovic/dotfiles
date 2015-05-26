@@ -1,23 +1,49 @@
 #!/bin/bash
 #
 # Update packages.
-
+# Usage:
+#
+#   $ updt [apt|npm|gem]
+#
 set -e
 
-if [ $(which apt-get) ]
-then
-  sudo apt-get update && sudo apt-get upgrade -y
-fi
+updt_apt() {
+  if [ $(which apt-get) ]
+  then
+    sudo apt-get update && sudo apt-get upgrade -y
+  fi
+}
 
-if [ $(which npm) ]
-then
-  sudo npm update -g
-fi
+updt_npm() {
+  if [ $(which npm) ]
+  then
+    sudo npm update -g
+  fi
+}
 
-if [ $(which gem) ]
-then
-  sudo gem update
-fi
+updt_gem() {
+  if [ $(which gem) ]
+  then
+    sudo gem update
+  fi
+}
+
+case "$1" in
+  apt)
+    updt_apt
+    ;;
+
+  npm)
+    updt_npm
+    ;;
+
+  gem)
+    updt_gem
+    ;;
+
+  *)
+    updt_apt && updt_npm && updt_gem
+esac
 
 # Remove temporary update files
 sudo rm -rf ~/tmp
