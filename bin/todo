@@ -6,16 +6,35 @@
 #
 #   $ todo
 #   $ todo add TASK
+#   $ todo edit TASK NEWTASK
 #   $ todo rm TASK
+#   $ todo clean
 #
+
+todo=~/dev/txt/todo # without trailing slash
 
 case "$1" in
   add)
-    touch ~/dev/txt/todo/$2
+    touch $todo/$2
+    ;;
+  edit)
+    if [ -f $todo/$2 ] && [ ! -f $todo/$3 ]
+    then
+      mv $todo/$2 $todo/$3
+    elif [ ! -f $todo/$2 ]
+    then
+      printf "\033[31mThere is no such task.\033[0m\n"
+    elif [ -f $todo/$3 ]
+    then
+      printf "\033[31mThere is already a task with such name.\033[0m\n"
+    fi
     ;;
   rm)
-    rm ~/dev/txt/todo/$2
+    rm -f $todo/$2
+    ;;
+  clean)
+    rm -f $todo/*
     ;;
   *)
-    ls -1 ~/dev/txt/todo
+    ls -1 $todo
 esac

@@ -32,15 +32,12 @@ case "$1" in
   apt)
     updt_apt
     ;;
-
   npm)
     updt_npm
     ;;
-
   gem)
     updt_gem
     ;;
-
   *)
     updt_apt && updt_npm && updt_gem
 esac
