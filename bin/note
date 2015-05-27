@@ -6,16 +6,35 @@
 #
 #   $ note
 #   $ note add NOTE
+#   $ note edit NOTE
 #   $ note rm NOTE
+#   $ note clean
 #
+
+note=~/dev/txt/note # without trailing slash
 
 case "$1" in
   add)
-    touch ~/dev/txt/note/$2
+    touch $note/$2
+    ;;
+  edit)
+    if [ -f $note/$2 ] && [ ! -f $note/$3 ]
+    then
+      mv $note/$2 $note/$3
+    elif [ ! -f $note/$2 ]
+    then
+      printf "\033[31mThere is no such note.\033[0m\n"
+    elif [ -f $note/$3 ]
+    then
+      printf "\033[31mThere is already such note.\033[0m\n"
+    fi
     ;;
   rm)
-    rm ~/dev/txt/note/$2
+    rm -f $note/$2
+    ;;
+  clean)
+    rm -f $note/*
     ;;
   *)
-    ls -1 ~/dev/txt/note
+    ls -1 $note
 esac
