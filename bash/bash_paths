@@ -7,5 +7,5 @@
 # Scripts
 PATH+=:~/.dotfiles/bin
 
-# Go (I'm using it for Hub)
+# Go (it's used for Hub)
 PATH+=:/usr/local/go/bin
