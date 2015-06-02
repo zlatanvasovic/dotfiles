@@ -6,7 +6,7 @@
 
 if [ $(which git) ]
 then
-  # Get `.git/` informations
+  # Get `.git/` information
   # Source: Smith (https://github.com/Swaagie/smith)
   git_title() {
     directory="/.git"

@@ -23,8 +23,8 @@ fi
 helpers=(
   /usr/local/rvm/scripts/rvm    # RVM
   ~/.dotfiles/bash/bash_options # Bash options
-  ~/.dotfiles/bash/bash_aliases # Bash aliases
   ~/.dotfiles/bash/bash_paths   # Bash paths
+  ~/.dotfiles/bash/bash_aliases # Bash aliases
   ~/.dotfiles/bash/bash_prompt  # Bash prompt
   ~/.dotfiles/bash/bash_title   # Bash terminal title
   /etc/bash_completion          # Bash completion

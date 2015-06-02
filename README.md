@@ -42,7 +42,7 @@ Example:
 ```bash
 #!/bin/bash
 #
-# Short and simple description.
+# Short and clear description.
 #
 # Usage:
 #
