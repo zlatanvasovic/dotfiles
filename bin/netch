@@ -4,7 +4,7 @@
 
 if [ "$(ping -c1 google.com | grep -w 0%)" ]
 then
-  printf "\n  \033[32mGood connection.\033[0m\n\n"
+  printf "\n  $(colorize "Good connection." green)\n\n"
 else
-  printf "\n  \033[31mBad connection.\033[0m\n\n"
+  printf "\n  $(colorize "Bad connection." red)\n\n"
 fi

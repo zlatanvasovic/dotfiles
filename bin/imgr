@@ -15,8 +15,8 @@ ext=png
 width=200
 
 # Load configuration from command arguments
-! [ ${#1} = 0 ] && ext=$1
-! [ ${#2} = 0 ] && width=$2
+! [ -z $1 ] && ext=$1
+! [ -z $2 ] && width=$2
 
 for img in *.$ext
 do
@@ -28,5 +28,5 @@ done
 
 if [ $? = 0 ]
 then
-  printf "\n  \033[1;32mDone.\033[0m\n\n"
+  printf "\n  $(colorize "Done." green)\n\n"
 fi

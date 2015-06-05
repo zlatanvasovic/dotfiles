@@ -23,10 +23,10 @@ case "$1" in
       mv $note/$2 $note/$3
     elif [ ! -f $note/$2 ]
     then
-      printf "\033[31mThere is no such note.\033[0m\n"
+      printf "$(colorize "There is no such note." red)\n"
     elif [ -f $note/$3 ]
     then
-      printf "\033[31mThere is already such note.\033[0m\n"
+      printf "$(colorize "There is already such note." red)\n"
     fi
     ;;
   rm)

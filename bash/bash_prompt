@@ -5,20 +5,10 @@
 #
 
 # Main prompt
-if [ "$colors_support" = true ]
-then
-  PS1="\[\033[1;35m\]%\[\033[00m\] \[\033[1;34m\]\w\[\033[00m\] "
-else
-  PS1="% \w "
-fi
+PS1="$(colorize "%" purple bold) $(colorize "\w" blue bold) "
 
 # Continuation prompt
-if [ "$colors_support" = true ]
-then
-  PS2="\[\033[1;37m\]|\[\033[00m\] "
-else
-  PS2="| "
-fi
+PS2="$(colorize "|" white bold) "
 
 # Reset prompt command
 unset PROMPT_COMMAND

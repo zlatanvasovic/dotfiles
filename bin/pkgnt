@@ -17,6 +17,6 @@ fi
 
 total=$(($apt + $npm))
 
-printf "\n  \033[1mapt:\033[0m   $apt\n"
-printf   "  \033[1mnpm:\033[0m   $npm\n"
-printf "\n  \033[1mtotal:\033[0m $total\n\n"
+printf "\n  $(colorize "apt:" black bold)   $apt\n"
+printf   "  $(colorize "npm:" black bold)   $npm\n"
+printf "\n  $(colorize "total:" black bold) $total\n\n"

@@ -1,0 +1,44 @@
+#!/bin/bash
+
+#
+# Bash colors
+#
+
+# "Colorize" the plain text.
+#
+# Usage:
+#
+#   $ colorize "TEXT" COLOR ["STYLE"] [BACKGROUND]
+#
+colorize() {
+  text="$1"
+
+  if [ "$colors_support" = true ]
+  then
+    color="$2"
+    style=($3)
+    background="$4"
+    colors=(black red green yellow blue purple cyan white)
+    styles=(regular bold italic underline reverse)
+    sn=(0 1 3 4 7)
+
+    for n in {0..7}
+    do
+      [[ $color == ${colors[n]} ]] && color="3$n"
+      [[ $background == ${colors[n]} ]] && background="4$n"
+      for s in ${!style[@]}
+      do
+        [[ ${style[s]} == ${styles[n]} ]] && style[s]="${sn[n]}"
+      done
+    done
+
+    ! [ -z $style ] && style="${style[*]};" && style=${style// /;}
+    ! [ -z $background ] && background=";$background"
+    background+="m"
+
+    text="\e[$style$color$background$text\e[0m"
+  fi
+
+  echo "$text"
+}
+export -f colorize

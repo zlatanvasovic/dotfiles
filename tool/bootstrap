@@ -12,20 +12,19 @@
 set -e
 
 info() {
-  printf "\n  \033[36m$1\033[0m"
+  printf "\n  $(colorize "$1" cyan)"
 }
 
 success() {
-  printf "\n  \033[32m$1\033[0m"
+  printf "\n  $(colorize "$1" green)"
 }
 
 fail() {
-  printf "\n  \033[31m$1\033[0m"
-  exit 1
+  printf "\n  $(colorize "$1" red)"
 }
 
 ask() {
-  printf "\n  \033[33m$1\033[0m "
+  printf "\n  $(colorize "$1" yellow) "
 }
 
 link_dotfile() {
@@ -80,14 +79,14 @@ link_dotfiles() {
       if [ "$overwrite" = true ] || [ "$overwrite_all" = true ]
       then
         rm -rf $dest
-        success "Removed $dest"
+        success "Removed $dest."
       fi
 
       if [ "$skip" = false ] && [ "$skip_all" = false ]
       then
         link_dotfile $dot $dest
       else
-        success "Skipped $dot"
+        success "Skipped $dot."
       fi
     else
       link_dotfiles $dot $dest
@@ -126,4 +125,4 @@ case "$1" in
     link_dotfiles && echo && gitconf
 esac
 
-echo -e "\n"
+echo
