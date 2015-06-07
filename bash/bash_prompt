@@ -4,11 +4,22 @@
 # Bash prompt
 #
 
+colorize_prompt() {
+  colorize $@ &>/dev/null
+
+  if [ "$colors_support" = true ]
+  then
+    text="\[\e[$style$color$background\]$1\[\e[0m\]"
+  fi
+
+  echo $text
+}
+
 # Main prompt
-PS1="$(colorize "%" purple bold) $(colorize "\w" blue bold) "
+PS1="$(colorize_prompt "%" purple bold) $(colorize_prompt "\w" blue bold) "
 
 # Continuation prompt
-PS2="$(colorize "|" white bold) "
+PS2="$(colorize_prompt "|" white bold) "
 
 # Reset prompt command
 unset PROMPT_COMMAND
