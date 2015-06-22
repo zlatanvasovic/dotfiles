@@ -1,8 +1,23 @@
 #!/bin/bash
 
 #
-# Bash colors
+# Bash functions
 #
+
+# Join elements into a string with specified delimiter.
+#
+# Usage:
+#
+#   $ join DELIMITER ELEMENTS
+#
+# Notes:
+#   - ELEMENTS may be either a space-delimited string or group of arguments
+#   - array should be converted to string via `"${array[*]}"` syntax
+join() {
+  local IFS="$1"
+  shift
+  echo "$*"
+}
 
 # "Colorize" the plain text.
 #

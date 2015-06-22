@@ -21,15 +21,15 @@ fi
 
 # Load helpers
 helpers=(
-  /usr/local/rvm/scripts/rvm    # RVM
-  ~/.dotfiles/bash/bash_options # Bash options
-  ~/.dotfiles/bash/bash_colors  # Bash colors
-  ~/.dotfiles/bash/bash_paths   # Bash paths
-  ~/.dotfiles/bash/bash_aliases # Bash aliases
-  ~/.dotfiles/bash/bash_prompt  # Bash prompt
-  ~/.dotfiles/bash/bash_title   # Bash terminal title
-  /etc/bash_completion          # Bash completion
-  ~/.bash_private               # Private stuff
+  /usr/local/rvm/scripts/rvm      # RVM
+  ~/.dotfiles/bash/bash_options   # Bash options
+  ~/.dotfiles/bash/bash_functions # Bash functions
+  ~/.dotfiles/bash/bash_paths     # Bash paths
+  ~/.dotfiles/bash/bash_aliases   # Bash aliases
+  ~/.dotfiles/bash/bash_prompt    # Bash prompt
+  ~/.dotfiles/bash/bash_title     # Bash terminal title
+  /etc/bash_completion            # Bash completion
+  ~/.bash_private                 # Private stuff
 )
 for helper in ${helpers[*]}
 do
