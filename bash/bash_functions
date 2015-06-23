@@ -8,16 +8,23 @@
 #
 # Usage:
 #
-#   $ join DELIMITER ELEMENTS
+#   $ ejoin DELIMITER ELEMENTS
 #
 # Notes:
 #   - ELEMENTS may be either a space-delimited string or group of arguments
-#   - array should be converted to string via `"${array[*]}"` syntax
-join() {
-  local IFS="$1"
-  shift
-  echo "$*"
+#   - array should be converted to string via `"${array[@]}"` syntax
+ejoin() {
+  if ! [ -z "$3" ]
+  then
+    local IFS="$1"
+    shift
+    echo "${*:1}"
+  else
+    echo $2
+  fi
 }
+
+export -f ejoin
 
 # "Colorize" the plain text.
 #
