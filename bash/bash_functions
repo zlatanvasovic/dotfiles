@@ -32,6 +32,8 @@ export -f ejoin
 #
 #   $ colorize "TEXT" COLOR ["STYLE"] [BACKGROUND]
 #
+# Notes:
+#   - STYLE may be either a single value or a space-delimited string 
 colorize() {
   text="$1"
 
