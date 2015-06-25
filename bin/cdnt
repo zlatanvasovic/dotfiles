@@ -3,9 +3,12 @@
 # Count code lines.
 
 # Files and directories to ignore
-ignores=(
-  .git
+fignores=(
   .ruby-version
+)
+
+dignores=(
+  .git
   .sass-cache
   _site
   _gh_pages
@@ -13,9 +16,9 @@ ignores=(
   node_modules
 )
 
-for item in ${ignores[*]}
-do
-  ignore+=" -o -name $item -prune"
-done
+fignore="$(ejoin "|" ${fignores[@]})"
+dignore="$(ejoin "|" ${dignores[@]})"
 
-find . -type f -print $ignore | xargs wc -l | awk "END {print \$1}"
+find . -regextype posix-extended \
+  \( -type f -regex "\./*($fignore)" -o -type d -regex "\./($dignore)/*" \) \
+  -prune -o -type f -print | xargs wc -l | awk "END {print \$1}"
