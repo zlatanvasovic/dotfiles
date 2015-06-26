@@ -1,10 +1,20 @@
 #!/bin/bash
 #
 # Update packages.
+#
 # Usage:
 #
-#   $ updt [apt|npm|gem]
+#   $ updt [apt|npm|gem]...
 #
+# Notes:
+#   - `updt` may either be used with no arguments (all updates) or with
+#   group of arguments that represent specific updates.
+#
+# Example:
+#
+#   $ updt apt gem
+#
+
 set -e
 
 updt_apt() {
@@ -28,19 +38,24 @@ updt_gem() {
   fi
 }
 
-case "$1" in
-  apt)
-    updt_apt
-    ;;
-  npm)
-    updt_npm
-    ;;
-  gem)
-    updt_gem
-    ;;
-  *)
-    updt_apt && updt_npm && updt_gem
-esac
+if [ -z "$1" ]
+then
+  updt_apt && updt_npm && updt_gem
+else
+  for i in $@
+  do
+    case "$i" in
+      apt)
+        updt_apt
+        ;;
+      npm)
+        updt_npm
+        ;;
+      gem)
+        updt_gem
+    esac
+  done
+fi
 
 # Remove temporary update files
 sudo rm -rf ~/tmp
