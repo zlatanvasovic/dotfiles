@@ -72,7 +72,6 @@ link_dotfiles() {
           *)
             fail "Incorrect value\n"
             exit 1
-            ;;
         esac
       fi
 
@@ -116,11 +115,9 @@ case "$1" in
   link)
     link_dotfiles
     ;;
-
   git)
     gitconf
     ;;
-
   *)
     link_dotfiles && echo && gitconf
 esac
