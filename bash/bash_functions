@@ -13,6 +13,12 @@
 # Notes:
 #   - ELEMENTS may be either a space-delimited string or group of arguments
 #   - array should be converted to string via `"${array[@]}"` syntax
+#
+# Examples:
+#
+#   $ ejoin , "one" "two"
+#   $ ejoin | "apt" "npm"
+#
 ejoin() {
   if ! [ -z "$3" ]
   then
@@ -33,7 +39,13 @@ export -f ejoin
 #   $ colorize "TEXT" COLOR ["STYLE"] [BACKGROUND]
 #
 # Notes:
-#   - STYLE may be either a single value or a space-delimited string 
+#   - STYLE may be either a single value or a space-delimited string
+#
+# Examples:
+#
+#   $ colorize "Hey!" blue bold
+#   $ colorize "Yo!" red italic white
+#
 colorize() {
   text="$1"
 
