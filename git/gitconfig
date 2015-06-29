@@ -5,6 +5,7 @@
   ci = commit
   co = checkout
   st = status -sb # Cleaner status view
+  names = diff --name-only
   stat = diff --stat
 
   # Print current branch name
