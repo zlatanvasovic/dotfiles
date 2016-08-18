@@ -52,3 +52,7 @@
 [user]
   email = EMAIL
   name = NAME
+
+# Hub configuration
+[hub]
+  protocol = ssh`
