@@ -21,7 +21,7 @@ fi
 
 # Load helpers
 helpers=(
-  /usr/local/rvm/scripts/rvm      # RVM
+  ~/.rvm/scripts/rvm              # RVM
   ~/.dotfiles/bash/bash_options   # Bash options
   ~/.dotfiles/bash/bash_functions # Bash functions
   ~/.dotfiles/bash/bash_paths     # Bash paths
@@ -38,3 +38,5 @@ do
     . $helper
   fi
 done
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting

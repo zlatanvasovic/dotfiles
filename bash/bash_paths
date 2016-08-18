@@ -8,4 +8,4 @@
 PATH+=:~/.dotfiles/bin
 
 # Go (used for Hub)
-PATH+=:/usr/local/go/bin
+PATH+=:/usr/lib/go/bin

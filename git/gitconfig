@@ -24,6 +24,7 @@
   pushup = !git push origin $(git cbr) --set-upstream
 
   # Scripts
+  author-rewrite = !~/.dotfiles/git/bin/author-rewrite
   count = !~/.dotfiles/git/bin/count
   credit = !~/.dotfiles/git/bin/credit
   nuke = !~/.dotfiles/git/bin/nuke
