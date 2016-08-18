@@ -55,4 +55,4 @@
 
 # Hub configuration
 [hub]
-  protocol = ssh`
+  protocol = ssh
