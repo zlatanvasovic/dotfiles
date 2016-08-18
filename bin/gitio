@@ -9,8 +9,8 @@
 #
 # Examples:
 #
-#   $ gitio https://github.com/ZDroid/dotfiles
-#   $ gitio https://github.com/ZDroid/mistype mistype
+#   $ gitio https://github.com/zdroid/dotfiles
+#   $ gitio https://github.com/zdroid/mistype mistype
 #
 # Source: https://gist.github.com/1209316
 

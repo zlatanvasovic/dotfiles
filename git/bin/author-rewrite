@@ -6,6 +6,11 @@
 #
 #   $ git author-rewrite OLD_EMAIL "CORRECT NAME" CORRECT_EMAIL
 #
+# You should review the history and execute the following command if everything
+# is alright:
+#
+#   $ git push --force --tags origin 'refs/heads/*'
+#
 # Source: https://help.github.com/articles/changing-author-info/
 
 export OLD_EMAIL="$1"

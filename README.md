@@ -1,6 +1,6 @@
 # ~/.dotfiles
 
-> @ZDroid's dotfiles
+> @zdroid's dotfiles
 
 Dotfiles are the shell stuff that makes your system awesome. These are mine.
 
@@ -28,7 +28,7 @@ You can remove what you don't use and add what you do use.
 If your fork is outdated, then you should update it.
 
 ```bash
-$ git remote add upstream https://github.com/ZDroid/dotfiles
+$ git remote add upstream https://github.com/zdroid/dotfiles
 $ git pull upstream master
 $ git push
 ```
@@ -65,4 +65,4 @@ Arguments may be subcommands, too.
 
 ## License
 
-MIT &copy; [Zlatan Vasović](https://github.com/ZDroid)
+MIT &copy; [Zlatan Vasović](https://github.com/zdroid)
