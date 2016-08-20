@@ -49,7 +49,7 @@ export -f ejoin
 colorize() {
   text="$1"
 
-  if [ "$colors_support" = true ]
+  if [ "$color_support" = true ]
   then
     color="$2"
     style=($3)

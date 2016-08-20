@@ -16,7 +16,7 @@ then
 fi
 
 # Colors
-if [ "$colors_support" = true ]
+if [ "$color_support" = true ]
 then
   alias ls="ls --color=auto"
   alias grep="grep --color=auto"

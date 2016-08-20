@@ -81,7 +81,7 @@ EOF
   }
 
   # Show help for no arguments if stdin is a terminal
-  if { [ -z "$1" ] && [ -t 0 ] ; } || [ "$1" == 'h' ] || [ "$1" == 'help' ]
+  if { [ -z "$1" ] && [ -t 0 ] ; } || [ "$1" == "h" ] || [ "$1" == "help" ]
   then
     help
     exit 0

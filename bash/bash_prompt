@@ -7,7 +7,7 @@
 colorize_prompt() {
   colorize $@ &>/dev/null
 
-  if [ "$colors_support" = true ]
+  if [ "$color_support" = true ]
   then
     text="\[\e[$style$color$background\]$1\[\e[0m\]"
   fi

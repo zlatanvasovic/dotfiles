@@ -16,7 +16,7 @@ then
   else
     eval "$(dircolors -b)"
   fi
-  export colors_support=true
+  export color_support=true
 fi
 
 # Load helpers
