@@ -23,6 +23,9 @@
   # Push and track the branch
   pushup = !git push origin $(git cbr) --set-upstream
 
+  # Force the push of all commits and tags
+  force = push -f --tags origin "refs/heads/*"
+
   # Scripts
   author-rewrite = !~/.dotfiles/git/bin/author-rewrite
   count = !~/.dotfiles/git/bin/count

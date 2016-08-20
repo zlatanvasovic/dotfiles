@@ -9,7 +9,7 @@
 # You should review the history and execute the following command if everything
 # is alright:
 #
-#   $ git push --force --tags origin 'refs/heads/*'
+#   $ git force
 #
 # Source: https://help.github.com/articles/changing-author-info/
 
