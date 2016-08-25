@@ -12,6 +12,8 @@
 #   $ gitio https://github.com/zdroid/dotfiles
 #   $ gitio https://github.com/zdroid/mistype mistype
 #
+# Note: CODE option doesn't work properly at the moment
+#
 # Source: https://gist.github.com/1209316
 
 url = ARGV[0]
