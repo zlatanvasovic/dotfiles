@@ -5,6 +5,7 @@
 # Files and directories to ignore
 fignores=(
   .ruby-version
+  npm-debug.log
 )
 
 dignores=(
