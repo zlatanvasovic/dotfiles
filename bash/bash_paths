@@ -9,3 +9,6 @@ PATH+=:~/.dotfiles/bin
 
 # Go (used for Hub)
 PATH+=:/usr/lib/go/bin
+
+# RVM secure path
+export rvmsudo_secure_path=1
