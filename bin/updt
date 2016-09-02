@@ -20,7 +20,7 @@ set -e
 updt_apt() {
   if [ $(which apt) ]
   then
-    sudo apt update && sudo apt full-upgrade -y
+    sudo apt update && sudo apt full-upgrade
   fi
 }
 
