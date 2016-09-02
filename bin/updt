@@ -18,9 +18,9 @@
 set -e
 
 updt_apt() {
-  if [ $(which apt-get) ]
+  if [ $(which apt) ]
   then
-    sudo apt update && sudo apt upgrade -y
+    sudo apt update && sudo apt full-upgrade -y
   fi
 }
 
