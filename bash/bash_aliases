@@ -10,11 +10,6 @@ then
   alias git=hub
 fi
 
-if [ $(which rethinkdb) ]
-then
-  alias rdb="rethinkdb -d .rdb"
-fi
-
 # Colors
 if [ "$color_support" = true ]
 then
@@ -27,6 +22,6 @@ alias uncrlf="sed -i 's/\r$//'"
 
 if [ $(which xclip) ]
 then
-  alias pbcopy="xclip -sel clip"
-  alias pbpaste="xclip -sel clip -o"
+  alias xcopy="xclip -sel clip"
+  alias xpaste="xclip -sel clip -o"
 fi

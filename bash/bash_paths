@@ -7,7 +7,7 @@
 # Scripts
 PATH+=:~/.dotfiles/bin
 
-# Go (used for Hub)
+# Go (used by Hub)
 PATH+=:/usr/lib/go/bin
 
 # RVM secure path
