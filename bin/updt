@@ -57,5 +57,6 @@ else
   done
 fi
 
-# Remove temporary update files
+# Remove temporary update files (beware of this line if you are using /tmp for
+# storing your temporary files)
 sudo rm -rf ~/tmp

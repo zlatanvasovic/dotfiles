@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Generates sparklines for a comma-separated or space-separated list of data.
+# Generate sparklines for a comma-separated or space-separated list of data.
 #
 # Usage:
 #

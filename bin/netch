@@ -2,7 +2,7 @@
 #
 # Ping with boolean output.
 
-if [ "$(ping -c1 google.com | grep -w 0%)" ]
+if [ "$(ping -c5 google.com | grep -w 0%)" ]
 then
   printf "\n  $(colorize "Good connection." green)\n\n"
 else

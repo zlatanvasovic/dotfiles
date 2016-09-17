@@ -1,11 +1,11 @@
 #!/bin/bash
 #
-# Count installed packages.
+# Roughly count installed packages.
 
 apt=0
 npm=0
 
-if [ $(which apt-get) ]
+if [ $(which apt) ]
 then
   apt=$(dpkg -l | grep ^ii | wc -l)
 fi
