@@ -7,8 +7,8 @@
 #   $ updt [apt|npm|gem]...
 #
 # Notes:
-#   - `updt` may either be used with no arguments (all updates) or with
-#   group of arguments that represent specific updates.
+#   - `updt` may either be used with no arguments (installs all updates) or with
+#   a group of arguments that represent specific updates.
 #
 # Example:
 #
@@ -16,6 +16,12 @@
 #
 
 set -e
+
+todos=(
+  apt
+  npm
+  gem
+)
 
 updt_apt() {
   if [ $(which apt) ]
@@ -40,23 +46,20 @@ updt_gem() {
 
 if [ -z "$1" ]
 then
-  updt_apt && updt_npm && updt_gem
+  for todo in "${todos[@]}"
+  do
+    eval "updt_$todo"
+  done
 else
   for i in $@
   do
-    case "$i" in
-      apt)
-        updt_apt
-        ;;
-      npm)
-        updt_npm
-        ;;
-      gem)
-        updt_gem
-    esac
+    for todo in "${todos[@]}"
+    do
+      [[ "$i" == "$todo" ]] && eval "updt_$todo"
+    done
   done
 fi
 
-# Remove temporary update files (beware of this line if you are using /tmp for
+# Remove temporary update files (beware of this line if you are using ~/tmp for
 # storing your temporary files)
 sudo rm -rf ~/tmp
