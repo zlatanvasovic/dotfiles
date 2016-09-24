@@ -4,12 +4,6 @@
 # Bash aliases
 #
 
-# General
-if [ $(which git) ] && [ $(which hub) ]
-then
-  alias git=hub
-fi
-
 # Colors
 if [ "$color_support" = true ]
 then
@@ -17,8 +11,15 @@ then
   alias grep="grep --color=auto"
 fi
 
+# Git
+if [ $(which git) ] && [ $(which hub) ]
+then
+  alias git=hub
+fi
+
 # Utilities
 alias uncrlf="sed -i 's/\r$//'"
+alias back="cd $OLDPWD"
 
 if [ $(which xclip) ]
 then

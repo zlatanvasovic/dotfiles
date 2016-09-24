@@ -4,7 +4,7 @@
 #
 # Usage:
 #
-#   $ git count [b|ca]
+#   $ git count [b|cia]
 #
 
 case "$1" in
@@ -14,7 +14,7 @@ case "$1" in
     ;;
 
   # Commits by author
-  ca)
+  cia)
     git shortlog -sn
     ;;
 
