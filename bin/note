@@ -6,7 +6,7 @@
 #
 #   $ note
 #   $ note add NOTE
-#   $ note edit NOTE
+#   $ note edit NOTE NEW_NOTE
 #   $ note rm NOTE
 #   $ note clean
 #
@@ -33,7 +33,14 @@ case "$1" in
     rm -f $note/$2
     ;;
   clean)
-    rm -f $note/*
+    printf "\n  $(colorize "Are you sure you want to delete all notes?
+  [y]es or [n]o" yellow) "
+    read -n 1 action
+    if [ "$action" = "y" ]
+    then
+      rm -f $note/*
+    fi
+    echo && echo
     ;;
   *)
     ls -1 $note
