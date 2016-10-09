@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Generate sparklines for a comma-separated or space-separated list of data.
+# Generate sparklines for a comma- or space-separated list of data.
 #
 # Usage:
 #
@@ -21,8 +21,8 @@ spark() {
     # round the number but that doesn't work on OS X (bash3) nor does
     # `awk '{printf "%.0f",$1}' <<< $n` work, so just cut it off
     n=${n%.*}
-    (( n < min )) && min=$n
-    (( n > max )) && max=$n
+    ((n < min)) && min=$n
+    ((n > max)) && max=$n
     numbers=$numbers${numbers:+ }$n
   done
 
@@ -30,10 +30,10 @@ spark() {
   local ticks=(▁ ▂ ▃ ▄ ▅ ▆ ▇ █)
 
   # Use a high tick if data is constant
-  (( min == max )) && ticks=(▅ ▆)
+  ((min == max)) && ticks=(▅ ▆)
 
   local f=$(( (($max - $min) << 8) / (${#ticks[@]} - 1) ))
-  (( f < 1 )) && f=1
+  ((f < 1)) && f=1
 
   for n in $numbers
   do
@@ -48,24 +48,25 @@ if [ "$BASH_SOURCE" == "$0" ]
   # Prints the help text for spark
   help() {
     local spark=$(basename $0)
-    cat <<EOF
+    echo "
+  Usage:
 
-  USAGE:
-    $ $spark [h|help] DATA
+    $ $spark DATA
+    $ $spark h[elp]
 
-  EXAMPLES:
+  Examples:
+
     $ $spark 1 5 22 13 53
     ▁▁▃▂█
     $ $spark 0,30,55,80,33,150
     ▁▂▃▄▂█
     $ echo 9 13 5 17 1 | $spark
     ▄▆▂█▁
-
-EOF
+"
   }
 
   # Show help for no arguments if stdin is a terminal
-  if { [ -z "$1" ] && [ -t 0 ] ; } || [ "$1" == "h" ] || [ "$1" == "help" ]
+  if { [ -z "$1" ] && [ -t 0 ]; } || [ "$1" == "h" ] || [ "$1" == "help" ]
   then
     help
     exit 0
