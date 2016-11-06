@@ -16,10 +16,10 @@ colorize_prompt() {
 }
 
 # Main prompt
-PS1="$(colorize_prompt "%" purple bold) $(colorize_prompt "\w" blue bold) "
+PS1="$(colorize_prompt "火" purple bold) $(colorize_prompt "\w" blue bold) "
 
 # Continuation prompt
-PS2="$(colorize_prompt "|" white bold) "
+PS2="$(colorize_prompt "|" cyan bold) "
 
 # Reset prompt command
 unset PROMPT_COMMAND
