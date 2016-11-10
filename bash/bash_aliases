@@ -19,7 +19,6 @@ fi
 
 # Utilities
 alias uncrlf="sed -i 's/\r$//'"
-alias back="cd $OLDPWD"
 
 if [ $(which xclip) ]
 then

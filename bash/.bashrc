@@ -31,6 +31,7 @@ helpers=(
   /etc/bash_completion            # Bash completion
   ~/.bash_private                 # Private stuff
 )
+
 for helper in ${helpers[*]}
 do
   if [ -f $helper ]
