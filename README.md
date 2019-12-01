@@ -1,6 +1,6 @@
 # ~/.dotfiles
 
-> @zdroid's dotfiles
+> [@zdroid](https://github.com/zdroid)'s dotfiles
 
 Dotfiles are the shell stuff that makes your system awesome. These are mine.
 
@@ -10,7 +10,7 @@ These dotfiles are meant to be used with Bash 4+. They aren't for Zsh, but some
 scripts may work as Zsh accepts Bash interpreter.
 
 If your shell doesn't support colors, don't worry. Your system's color support
-will be automatically detected and so decided to use colors or no.
+will be automatically detected, and by it decided whether to use colors.
 
 ## Bootstrap
 
@@ -38,7 +38,7 @@ $ git push
 
 ## Documentation
 
-All scripts have documentation on the start, just after the interpreter line
+All scripts have documentation on the beginning of the file just after the interpreter line
 (e.g. `#!/bin/bash`).
 
 Example:
