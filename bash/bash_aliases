@@ -25,3 +25,6 @@ then
   alias xcopy="xclip -sel clip"
   alias xpaste="xclip -sel clip -o"
 fi
+
+# Make VSCode icon agree with the icon theme
+alias vscodeicon="sudo sed -i 's/\/usr\/share\/pixmaps\/com.visualstudio.code.png/vscode/g' /usr/share/applications/code.desktop"
