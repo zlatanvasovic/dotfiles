@@ -20,7 +20,8 @@ set -e
 todos=(
   apt
   npm
-  gem
+# Note: I don't use gem anymore
+#  gem
 )
 
 updt_apt() {
