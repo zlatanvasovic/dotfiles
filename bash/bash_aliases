@@ -17,6 +17,10 @@ then
   alias git=hub
 fi
 
+# Mistake prevention
+alias rm="rm -iv"
+alias mv="mv -iv"
+
 # Utilities
 alias uncrlf="sed -i 's/\r$//'"
 
