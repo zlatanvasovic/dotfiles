@@ -18,8 +18,8 @@ then
 fi
 
 # Mistake prevention
-alias rm="rm -iv"
-alias mv="mv -iv"
+alias rm="rm -i"
+alias mv="mv -i"
 
 # Utilities
 alias uncrlf="sed -i 's/\r$//'"

@@ -7,6 +7,9 @@
 # Scripts
 PATH+=:~/.dotfiles/bin
 
+# Julia (used by me)
+PATH+=:~/Downloads/Packages/julia-1.5.2/bin
+
 # Go (used by Hub)
 PATH+=:/usr/lib/go/bin
 
